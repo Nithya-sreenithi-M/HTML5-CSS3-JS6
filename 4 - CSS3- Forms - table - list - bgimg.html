@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>CSS3 forms table list bgimg</title>
+</head>
+<body>
+	<style type="text/css">
+			body{
+				background-color: lavenderblush;
+				width: 90%;
+				margin: 0 auto;
+			}
+	</style>
+
+	<h3>background-image</h3>
+	<div id="bgim-1">
+		We could see the background image is repeated multiple times because div is 500 X 600 px and the image is 144 X 144px.
+	</div>
+	<style>
+		#bgim-1{
+			width: 500px;
+			height: 600px;
+			border: 2px cyan solid;
+			margin: 0 auto;
+			background-image: url('images/image.png');
+		}
+	</style>
+
+	<p>To stop the repeat use background-repeat: no-repeat;</p>
+	<div id="bgim-2">
+		We could see the background image is repeated multiple times because div is 500 X 600 px and the image is 144 X 144px.
+	</div>
+	<style>
+		#bgim-2{
+			width: 500px;
+			height: 600px;
+			border: 2px cyan solid;
+			margin: 0 auto;
+			background-image: url('images/image.png');
+			background-repeat: no-repeat;
+		}
+	</style>
+
+	<p>To repeat in x - axis use background-repeat: repeat-x;</p>
+	<div id="bgim-3">
+		We could see the background image is repeated multiple times because div is 500 X 600 px and the image is 144 X 144px.
+	</div>
+	<style>
+		#bgim-3{
+			width: 500px;
+			height: 600px;
+			border: 2px cyan solid;
+			margin: 0 auto;
+			background-image: url('images/image.png');
+			background-repeat: repeat-x;
+		}
+
+	</style>
+	<p>To repeat in y - axis use background-repeat: repeat-y;</p>
+	<div id="bgim-4">
+		We could see the background image is repeated multiple times because div is 500 X 600 px and the image is 144 X 144px.
+	</div>
+	<style>
+		#bgim-4{
+			width: 500px;
+			height: 600px;
+			border: 2px cyan solid;
+			margin: 0 auto;
+			background-image: url('images/image.png');
+			background-repeat: repeat-y;
+		}
+
+	</style>
+
+	<h3>background-position:</h3>
+	<p>by default background-position: is top left. </p>
+	<ol>
+		<li>left top</li>
+		<li>center top</li>
+		<li>right top</li>
+		<li>left center</li>
+		<li>center center</li>
+		<li>right center</li>
+		<li>left right</li>
+		<li>center right</li>
+		<li>right right</li>	
+	</ol>
+	<div id="bgimra">
+		
+	</div>
+	<style>
+			#bgimra{
+				width: 500px;
+				height: 600px;
+				border: 2px cyan solid;
+				margin: 0 auto;
+				background-image: url('images/image.png');
+				background-repeat: no-repeat;
+				background-position: center center;
+			}
+	</style>
+
+	<h3>background-attachment: fixed or scroll</h3>
+	<p>The logo N is fixed at top right. background: url('images/N.png') no-repeat fixed top right lavenderish; will also works as same. 
+		background-position: top right; or background-position: 90% 1%; or background-position: 18px 40px;
+	</p>
+	<style>
+		body{
+			background-image: url('images/N.png');
+			background-position: top right;
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+		}
+	</style>
+
+	<h3>li style property</h3>
+	<h2></h2>
+	<ul id="circle">
+		<li id="nos">no style</li>
+		<li id="disc">disc style(default)</li>
+		<li>circle style is applied to ul tag</li>
+		<li>All li with this ul without defined style will get circle </li>
+		<li id="square">square style</li>
+		<li>are the ul styles</li>
+	</ul>
+	
+	<ol >
+		<li id="deci">decimal style (default)</li>
+		<li id="decil">decimal leading zero style</li>
+		<li id="las">lower alpha style</li>
+		<li id="uas">upper alpha style</li>
+		<li id="lrs">lower roman style</li>
+		<li id="urs">upper roman style</li>
+		<li id="cus">custom style is not used because aligning the pointer and text is hell.</li>
+	</ol>
+	<style>
+		#nos{
+			list-style-type: none;
+		}
+		#disc{
+			list-style-type: disc;
+		}
+		#circle{
+			list-style-type: circle;
+		}
+		#square{
+			list-style-type: square;
+		}
+		#deci{
+			list-style-type: decimal;
+		}
+		#decil{
+			list-style-type: decimal-leading-zero;
+		}
+		#las{
+			list-style-type: lower-alpha;
+		}
+		#uas{
+			list-style-type: upper-alpha;
+		}
+		#lrs{
+			list-style-type: lower-roman;
+		}
+		#urs{
+			list-style-type: upper-roman;
+		}
+		#cus{
+			list-style-type: none;
+			background: url('images/image.png') no-repeat 0 4px;
+			padding-left: 220px;
+		}
+	</style>
+
+	<h3>list-style-position: inside;</h3>
+	<ul id="lisstyp">
+		<li>list's bullets present in padding area not in content area. To bring the bullet inside the content space use list-style-position: inside;</li>
+		<li>list-style:square inside; is the short hand</li>
+	</ul>
+	<style type="text/css">
+		#lisstyp{
+			list-style-position: inside;
+		}
+	</style>
+
+	<h3>Table styling</h3>
+	<P>
+		Table border gives border to only table not for every cells. space between two borders are controlled using border-spacing: 0;but two borders will touch each other making the 3px+3px = 6px line. so border-collapse:collapse; border-collapse:separate;(defualt)
+	</P>
+	<table id="tperio" border="3">
+		<tr>
+			<th rowspan="2">day</th>
+			<th colspan="5" id="period">periods</th>
+		</tr>
+		<tr>
+			
+			<th>"1"</th>
+			<th>"2"</th>
+			<th rowspan="6">Recess</th>
+			<th>"3"</th>
+			<th>"4"</th>
+		</tr>
+		<tr>
+			<th>"M"</th>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+					
+		</tr>
+		<tr>
+			<th>"T"</th>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>			
+		</tr>
+		<tr>
+			<th>"W"</th>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>			
+		</tr>
+		<tr>
+
+			<th>"T"</th>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+
+			<th>"F"</th>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+	</table>
+	<style>
+		#tperio{
+			width: 90%;
+			margin: 0 auto;
+			border: 3px cyan solid;
+			border-spacing: 0px;
+			border-collapse: collapse;
+		}
+		#tperio td, #tperio tr{
+			border: 2px chartreuse solid;
+			padding: 5px;
+			
+		}
+		#tperio th{
+			border: 2px darkmagenta solid;
+			padding: 5px;	
+		}
+		#period{
+			background-color: lightgreen;
+		}
+
+	</style>
+
+	<h3>empty-cells: show (default) </h3>
+	<p>empty-cells: hide; hides empty cells. can be used to hide cells in td, th or both (table) </p>
+	<table id="empty">
+		<tr>
+			<td>3</td>
+			<td>3</td>
+			
+		</tr>
+		<tr>
+			<td>3</td>
+			<td></td>
+		</tr>
+		<th>
+			<td></td>
+			<td></td>
+		</th>
+		<tr>
+			<td></td>
+			<td></td>
+			
+		</tr>
+		<tr>
+			<td>3</td>
+			<td></td>
+		</tr>
+	</table>
+	<style>
+		#empty td{
+			border: 2px cyan solid;
+			padding: 5px;	
+		}
+		#empty{
+			empty-cells: hide;
+		}
+	</style>
+
+	<h3>forms</h3>
+	<p>forms appears differently in different broswers so its important to define a style to the form.</p>
+	<form  method="POST">
+		<fieldset>
+			<legend>login</legend><br>
+			<label>username</label><br>
+			<input type="text" name="username"><br>
+			<label>email</label><br>
+			<input type="email" name="email"><br>
+			<label>password</label><br>
+			<input type="password" name="pas"><br>
+			<label>confirm password</label><br>
+			<input type="password" name="cpass"><br>
+			<label>marital status</label><br>
+			<input type="radio" name="maritals" value="s" checked > single
+			<input type="radio" name="maritals" value="m"> mingle<br>
+		</fieldset>
+		<fieldset>
+			<legend>user favs</legend>
+			<label>fav game</label><br>
+			<select name="games[]" multiple="multiple" size="2">
+				<option value="volley"> volleyball</option>
+				<option value="foot">football</option>
+				<option value="cycling"> cycling</option>
+			</select><br>
+			<label>your fav food</label><br>
+			<input type="Checkbox" name="food[]" value="burger " checked> burger
+			<input type="Checkbox" name="food[]" value="cburger "> chicken burger
+			<input type="Checkbox" name="food[]" value="pcburger "> pepper chicken burger<br>	
+		</fieldset><br>
+		<input id="sum" type="submit" name="submit">
+	</form>
+	<style>
+		fieldset{
+			border:3px cyan double;
+			padding: 30px;
+			margin: 5px auto;
+			width: 90%;
+		}
+		legend{
+			background:skyblue;
+			padding: 5px;
+			margin-left: -10px;
+		}
+	</style>
+	<p>padding: 30px moves the legend too. Inorder to move it left margin-left: -10. check it 1.remove padding and margin-left, 2. add padding, 3. add margin-left</p>
+	<p>When margin-left is - 40px, legend moves 10px outside fieldset.</p>
+
+
+
+</body>
+</html>

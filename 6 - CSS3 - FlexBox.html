@@ -1,0 +1,649 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+		<title>FlexBox</title>
+</head>
+<body>
+	<h2><center><a href="https://www.youtube.com/watch?v=fYq5PXgSsbE&t=301s">Flex properties</a></center></h2>
+	<h3>No flex:</h3>
+	<div class="container-non-flexbox">
+		<div class="group item-1"></div>
+		<div class="group item-2"></div>
+		<div class="group item-3"></div>
+	</div>
+	<style type="text/css">
+		.container-non-flexbox{
+			border: 2px solid black;
+		}
+		.group{
+			width: 200px;
+			margin: 10px;
+			border: 3px solid black;
+			background-color: lightgray;
+		}
+		.item-1{
+			min-height: 20px;
+		}
+		.item-2{
+			min-height: 40px;
+		}
+		.item-3{
+			min-height: 60px;
+		}
+	</style>
+
+	<h3>display: flex</h3>
+	<p>
+		3 boxes got equal size due to flex and gets resized when adjusted.
+	</p>
+	<div class="container-flexbox-1">
+		<div class="group item-1"></div>
+		<div class="group item-2"></div>
+		<div class="group item-3"></div>
+	</div>
+	<style type="text/css">
+		.container-flexbox-1{
+			border: 2px solid black;
+			display: flex;
+		}
+		.container-flexbox-1 .group{
+			width: 200px;
+			margin: 10px;
+			border: 3px solid black;
+			background-color: lightgray;
+		}
+		.container-flexbox-1 .item-1{
+			min-height: 20px;
+		}
+		.container-flexbox-1 .item-2{
+			min-height: 40px;
+		}
+		.container-flexbox-1 .item-3{
+			min-height: 60px;
+		}
+	</style>
+	<p>
+		Thus it creates flexibility to child elements just by using display: flex in parent div
+	</p>
+
+	<h3>Main and Cross axis</h3>
+	<p>
+		Row layout(default) gets vertical cross axis and horizontal main axix. Column layout gets vice versa.<br>
+	</p>
+
+	<h3>justify-content: flex-start;</h3>
+	<p>Justify-content in row layout align items in main axis.</p>
+	<div class="container-flexbox-2">
+		<div class="group item-1"></div>
+		<div class="group item-2"></div>
+		<div class="group item-3"></div>
+	</div>
+	<style type="text/css">
+		.container-flexbox-2{
+			border: 2px solid black;
+			display: flex;
+			justify-content: flex-start;
+		}
+		.container-flexbox-2 .group{
+			width: 200px;
+			margin: 10px;
+			border: 3px solid black;
+			background-color: lightgray;
+		}
+		.container-flexbox-2 .item-1{
+			min-height: 20px;
+		}
+		.container-flexbox-2 .item-2{
+			min-height: 40px;
+		}
+		.container-flexbox-2 .item-3{
+			min-height: 60px;
+		}
+	</style>
+
+	<h3>justify-content: center;</h3>
+	<div class="container-flexbox-3">
+		<div class="group item-1"></div>
+		<div class="group item-2"></div>
+		<div class="group item-3"></div>
+	</div>
+	<style type="text/css">
+		.container-flexbox-3{
+			border: 2px solid black;
+			display: flex;
+			justify-content: center;
+		}
+		.container-flexbox-3 .group{
+			width: 200px;
+			margin: 10px;
+			border: 3px solid black;
+			background-color: lightgray;
+		}
+		.container-flexbox-3 .item-1{
+			min-height: 20px;
+		}
+		.container-flexbox-3 .item-2{
+			min-height: 40px;
+		}
+		.container-flexbox-3 .item-3{
+			min-height: 60px;
+		}
+	</style>
+
+	<h3>justify-content: space-between;</h3>
+	<div class="container-flexbox-4">
+		<div class="group item-1"></div>
+		<div class="group item-2"></div>
+		<div class="group item-3"></div>
+	</div>
+	<style type="text/css">
+		.container-flexbox-4{
+			border: 2px solid black;
+			display: flex;
+			justify-content: space-between;
+		}
+		.container-flexbox-4 .group{
+			width: 200px;
+			margin: 10px;
+			border: 3px solid black;
+			background-color: lightgray;
+		}
+		.container-flexbox-4 .item-1{
+			min-height: 20px;
+		}
+		.container-flexbox-4 .item-2{
+			min-height: 40px;
+		}
+		.container-flexbox-4 .item-3{
+			min-height: 60px;
+		}
+	</style>
+
+	<h3>justify-content: space-around;</h3>
+	<div class="container-flexbox-5">
+		<div class="group item-1"></div>
+		<div class="group item-2"></div>
+		<div class="group item-3"></div>
+	</div>
+	<style type="text/css">
+		.container-flexbox-5{
+			border: 2px solid black;			
+			display: flex;
+			justify-content: space-around;
+		}
+		.container-flexbox-5 .group{
+			width: 200px;
+			margin: 10px;
+			border: 3px solid black;
+			background-color: lightgray;
+		}
+		.container-flexbox-5 .item-1{
+			min-height: 20px;
+		}
+		.container-flexbox-5 .item-2{
+			min-height: 40px;
+		}
+		.container-flexbox-5 .item-3{
+			min-height: 60px;
+		}
+	</style>
+
+	<h3>align-item: strech;</h3>
+	<p>Default value, this property streched our boxes and increased height as size of container irrespective of min-height.</p>
+
+	<h3>align-item: start;</h3>
+	<p>Aligns vertically in cross axis(row layout).</p>
+	<div class="container-flexbox-6">
+		<div class="group item-1"></div>
+		<div class="group item-2"></div>
+		<div class="group item-3"></div>
+	</div>
+	<style type="text/css">
+		.container-flexbox-6{
+			min-height: 140px;
+			border: 2px solid black;
+			display: flex;
+			align-items: flex-start;
+		}
+		.container-flexbox-6 .group{
+			width: 200px;
+			margin: 10px;
+			border: 3px solid black;
+			background-color: lightgray;
+		}
+		.container-flexbox-6 .item-1{
+			min-height: 20px;
+		}
+		.container-flexbox-6 .item-2{
+			min-height: 40px;
+		}
+		.container-flexbox-6 .item-3{
+			min-height: 60px;
+		}
+	</style>
+
+	<h3>align-item: center;</h3>
+	<div class="container-flexbox-7">
+		<div class="group item-1"></div>
+		<div class="group item-2"></div>
+		<div class="group item-3"></div>
+	</div>
+	<style type="text/css">
+		.container-flexbox-7{
+			min-height: 140px;
+			border: 2px solid black;
+			display: flex;
+			align-items: center;
+		}
+		.container-flexbox-7 .group{
+			width: 200px;
+			margin: 10px;
+			border: 3px solid black;
+			background-color: lightgray;
+		}
+		.container-flexbox-7 .item-1{
+			min-height: 20px;
+		}
+		.container-flexbox-7 .item-2{
+			min-height: 40px;
+		}
+		.container-flexbox-7 .item-3{
+			min-height: 60px;
+		}
+	</style>
+
+	<h3>align-item: flex-end;</h3>
+	<div class="container-flexbox-8">
+		<div class="group item-1"></div>
+		<div class="group item-2"></div>
+		<div class="group item-3"></div>
+	</div>
+	<style type="text/css">
+		.container-flexbox-8{
+			min-height: 140px;
+			border: 2px solid black;
+			display: flex;
+			align-items: flex-end;
+		}
+		.container-flexbox-8 .group{
+			width: 200px;
+			margin: 10px;
+			border: 3px solid black;
+			background-color: lightgray;
+		}
+		.container-flexbox-8 .item-1{
+			min-height: 20px;
+		}
+		.container-flexbox-8 .item-2{
+			min-height: 40px;
+		}
+		.container-flexbox-8 .item-3{
+			min-height: 60px;
+		}
+	</style>
+
+	<h3>flex-warp: warp;</h3>
+	<p>Items were shrinking when browser is adjusted. flex-warp: warp will make the items wrap withing the container retaining the same size.</p>
+	<div class="container-flexbox-9">
+		<div class="group item-1"></div>
+		<div class="group item-2"></div>
+		<div class="group item-3"></div>
+	</div>
+	<style type="text/css">
+		.container-flexbox-9{
+			min-height: 200px;
+			flex-wrap: wrap;
+			border: 2px solid black;
+			display: flex;
+			
+		}
+		.container-flexbox-9 .group{
+			width: 250px;
+			margin: 10px;
+			border: 3px solid black;
+			background-color: lightgray;
+		}
+		.container-flexbox-9 .item-1{
+			min-height: 20px;
+		}
+		.container-flexbox-9 .item-2{
+			min-height: 40px;
+		}
+		.container-flexbox-9 .item-3{
+			min-height: 60px;
+		}
+	</style>
+
+	<h3>align-content: flex-end;</h3>
+	<p>Will tell warp elements should start. align-item is overridden.
+	</p>
+	<p>Try flex-start, center, space-around, space-between.</p>
+	<p>align-content and align-item will align items in cross axis. align-content will override align-item.</p>
+	<div class="container-flexbox-1a">
+		<div class="group item-1"></div>
+		<div class="group item-2"></div>
+		<div class="group item-3"></div>
+	</div>
+	<style type="text/css">
+		.container-flexbox-1a{
+			min-height: 200px;
+
+			flex-wrap: wrap;
+			align-content: flex-end;
+
+			border: 2px solid black;
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+			
+		}
+		.container-flexbox-1a .group{
+			width: 200px;
+			margin: 10px;
+			border: 3px solid black;
+			background-color: lightgray;
+		}
+		.container-flexbox-1a .item-1{
+			min-height: 20px;
+		}
+		.container-flexbox-1a .item-2{
+			min-height: 40px;
+		}
+		.container-flexbox-1a .item-3{
+			min-height: 60px;
+		}
+	</style>
+
+	<h3>flex-direction: column;</h3>
+	<p> 
+		Change from row layout to column layout. Now axis also changes. justify-content will align items vertically.
+	</p>
+	<div class="container-flexbox-1b">
+		<div class="group item-1"></div>
+		<div class="group item-2"></div>
+		<div class="group item-3"></div>
+	</div>
+	<style type="text/css">
+		.container-flexbox-1b{
+			min-height: 300px;
+			border: 2px solid black;
+			flex-direction: column;
+			display: flex;
+			justify-content: center;
+		}
+		.container-flexbox-1b .group{
+			width: 200px;
+			margin: 10px;
+			border: 3px solid black;
+			background-color: lightgray;
+		}
+		.container-flexbox-1b .item-1{
+			min-height: 20px;
+		}
+		.container-flexbox-1b .item-2{
+			min-height: 40px;
+		}
+		.container-flexbox-1b .item-3{
+			min-height: 60px;
+		}
+	</style>
+
+	<p> 
+		align-items centers horizontally.
+	</p>
+	<div class="container-flexbox-1c">
+		<div class="group item-1"></div>
+		<div class="group item-2"></div>
+		<div class="group item-3"></div>
+	</div>
+	<style type="text/css">
+		.container-flexbox-1c{
+			min-height: 300px;
+			border: 2px solid black;
+			flex-direction: column;
+			display: flex;
+			align-items: center;
+		}
+		.container-flexbox-1c .group{
+			width: 200px;
+			margin: 10px;
+			border: 3px solid black;
+			background-color: lightgray;
+		}
+		.container-flexbox-1c .item-1{
+			min-height: 20px;
+		}
+		.container-flexbox-1c .item-2{
+			min-height: 40px;
+		}
+		.container-flexbox-1c .item-3{
+			min-height: 60px;
+		}
+	</style>
+	<p>Thus cross axis is horizontal in column based container. Main is vertical.</p>
+
+	<h3>flex-shrink:0;</h3>
+	<p> 
+		flex-box one won't shrink when screen size reduce.
+	</p>
+	<div class="container-flexbox-1d">
+		<div class="group item-1"></div>
+		<div class="group item-2"></div>
+		<div class="group item-3"></div>
+	</div>
+	<style type="text/css">
+		.container-flexbox-1d{
+			min-height: 300px;
+			border: 2px solid black;
+			display: flex;
+		}
+		.container-flexbox-1d .group{
+			width: 200px;
+			margin: 10px;
+			border: 3px solid black;
+			background-color: lightgray;
+
+		}
+		.container-flexbox-1d .item-1{
+			min-height: 20px;
+
+			flex-shrink: 0;
+		}
+		.container-flexbox-1d .item-2{
+			min-height: 40px;
+		}
+		.container-flexbox-1d .item-3{
+			min-height: 60px;
+		}
+	</style>
+
+	<h3>flex-grow: 1;</h3>
+	<p> 
+		item-3 will grow and fill the extra space.
+	</p>
+	<div class="container-flexbox-1e">
+		<div class="group item-1"></div>
+		<div class="group item-2"></div>
+		<div class="group item-3"></div>
+	</div>
+	<style type="text/css">
+		.container-flexbox-1e{
+			min-height: 300px;
+			border: 2px solid black;
+			display: flex;
+		}
+		.container-flexbox-1e .group{
+			width: 200px;
+			margin: 10px;
+			border: 3px solid black;
+			background-color: lightgray;
+
+		}
+		.container-flexbox-1e .item-1{
+			min-height: 20px;
+		}
+		.container-flexbox-1e .item-2{
+			min-height: 40px;
+		}
+		.container-flexbox-1e .item-3{
+			min-height: 60px;
+			flex-grow: 1;
+		}
+	</style>
+
+	<h3>flex-grow: 2;</h3>
+	<p> 
+		item 2 will get 2 twice the amount of empty space than item-3
+	</p>
+	<div class="container-flexbox-1f">
+		<div class="group item-1"></div>
+		<div class="group item-2"></div>
+		<div class="group item-3"></div>
+	</div>
+	<style type="text/css">
+		.container-flexbox-1f{
+			min-height: 300px;
+			border: 2px solid black;
+			display: flex;
+		}
+		.container-flexbox-1f .group{
+			width: 200px;
+			margin: 10px;
+			border: 3px solid black;
+			background-color: lightgray;
+
+		}
+		.container-flexbox-1f .item-1{
+			min-height: 20px;
+		}
+		.container-flexbox-1f .item-2{
+			min-height: 40px;
+			flex-grow: 2;
+		}
+		.container-flexbox-1f .item-3{
+			min-height: 60px;
+			flex-grow: 1;
+		}
+	</style>
+	<p>item 2 is not twice(flex-grow: 2) of item 3 because we have width 200px. Remaining space is added on to the 200 px</p>
+
+	<h3>flex-basis: 0 </h3>
+	<p>This will assume item 2 and 3 has 0px width. Now item 2 is twice as 3</p>
+
+	<div class="container-flexbox-1g">
+		<div class="group item-1"></div>
+		<div class="group item-2"></div>
+		<div class="group item-3"></div>
+	</div>
+	<style type="text/css">
+		.container-flexbox-1g{
+			min-height: 300px;
+			border: 2px solid black;
+			display: flex;
+		}
+		.container-flexbox-1g .group{
+			width: 200px;
+			margin: 10px;
+			border: 3px solid black;
+			background-color: lightgray;
+
+		}
+		.container-flexbox-1g .item-1{
+			min-height: 20px;
+		}
+		.container-flexbox-1g .item-2{
+			min-height: 40px;
+			flex-grow: 2;
+			flex-basis: 0;
+		}
+		.container-flexbox-1g .item-3{
+			min-height: 60px;
+			flex-grow: 1;
+			flex-basis: 0;
+		}
+	</style>
+
+	<h3>align-self: center </h3>
+	<p>Overrides the align content property and aligns itself in cross axis center.</p>
+	<p>Try flex-end, flex-start. align-self also aligns items in cross axis.</p>
+	<div class="container-flexbox-1h">
+		<div class="group item-1"></div>
+		<div class="group item-2"></div>
+		<div class="group item-3"></div>
+	</div>
+	<style type="text/css">
+		.container-flexbox-1h{
+			min-height: 300px;
+			border: 2px solid black;
+			display: flex;
+		}
+		.container-flexbox-1h .group{
+			width: 200px;
+			margin: 10px;
+			border: 3px solid black;
+			background-color: lightgray;
+
+		}
+		.container-flexbox-1h .item-1{
+			min-height: 20px;
+		}
+		.container-flexbox-1h .item-2{
+			min-height: 40px;
+			flex-grow: 2;
+			flex-basis: 0;
+			align-self: center;
+		}
+		.container-flexbox-1h .item-3{
+			min-height: 60px;
+			flex-grow: 1;
+			flex-basis: 0;
+		}
+	</style>
+
+	<h3>order </h3>
+	<p>
+		To rearrange the items without changing html code. <br> Note recommended as tab, and text readers will follow HTML code, not visual order.1i
+	</p>
+	
+	<div class="container-flexbox-1i">
+		<div class="group item-1"> flex-box: 1</div>
+		<div class="group item-2"> flex-box: 2</div>
+		<div class="group item-3"> flex-box: 3</div>
+	</div>
+	<style type="text/css">
+		.container-flexbox-1i{
+			min-height: 300px;
+			border: 2px solid black;
+			display: flex;
+		}
+		.container-flexbox-1i .group{
+			width: 200px;
+			margin: 10px;
+			border: 3px solid black;
+			background-color: lightgray;
+
+		}
+		.container-flexbox-1i .item-1{
+			min-height: 20px;
+			order: 2;
+		}
+		.container-flexbox-1i .item-2{
+			min-height: 40px;
+			flex-grow: 2;
+			flex-basis: 0;
+			align-self: center;
+			order: 3;
+		}
+		.container-flexbox-1i .item-3{
+			min-height: 60px;
+			flex-grow: 1;
+			flex-basis: 0;
+			order: 1;
+		}
+	</style>
+
+	<h3>flex: flex-grow flex-shrink flex-basis; short-hand</h3>
+	<h3>flex: 1; will get flex-shrink and flex-basis default value.</h3>
+</body>
+</html>

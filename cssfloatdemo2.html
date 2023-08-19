@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<div id="page2">
+	<div id="header2">
+		<h1>demo 2</h1>
+		<p>demo 2</p>
+	</div>
+	<div id="content">
+		<div id="main">
+			<h2>Welcome to 2 nd demo</h2>
+			<p></p>
+		</div>
+		<div id="nav">
+			<h2>navigation menu</h2>
+			<ul>
+				<li><a href="#"> home</a></li>
+				<li><a href="#">about</a></li>
+				<li><a href="#">service</a></li>
+				<li><a href="#">gallery</a></li>
+			</ul>
+		</div>
+		<br class="bg">
+	</div>
+
+	<div id="footer2">
+		<p>@contact:</p>
+	</div>
+</div>
+<!--width: 65%;-takes 65% of parent page2 width
+#nav{
+			width: 30%;
+			float: left;
+		} - makes footer to display in remaining space. if it is omitted nav alone will be made to float by main.
+clear: right; 
+clear: both;
+clear: left;- To make footer not to float.
+background colour is given separatly to main and nav then margin will not get colour.
+so give margin colour to content.
+background-color: khaki; - color is not visible because height of content div is zero. content height is  div height here contents of content div is floating. We need content to create height, using br tag as content we can achieve height
+br also will float so clear float in the br. now br at the end of all contents so br is like the last element and helps in deciding the height of the content. height of the content is main+nav+bg.
+as br clears float footer dont need to do that.
+-->
+
+<!--	<style>
+		#page2{
+			width: 90%;
+			margin: 0 auto;
+		}
+		#main{
+			width: 65%;
+			float: left;
+			margin-right: 5%;
+		}
+		#nav{
+			width: 30%;
+			float: left;
+		}
+		#footer{
+			clear: left;
+		}
+		#content{
+			background-color: khaki;
+		}
+	</style>-->
+	<style>
+		#page2{
+			width: 90%;
+			margin: 0 auto;
+		}
+		#main{
+			width: 65%;
+			float: left;
+			margin-right: 5%;
+		}
+		#nav{
+			width: 30%;
+			float: left;
+		}
+		.bg{
+			clear: left;
+		}
+		#content{
+			background-color: khaki;
+			padding: 15px;
+		}
+	</style>
+
+</body>
+</html>

@@ -1,0 +1,1160 @@
+<!--camel case for all fuctionsname. snakecase for class name-->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>javascript</title>
+</head>
+<body>
+	<h1>javascript</h1>
+
+	<h2>Software</h2>
+	<ul>
+		<li>desktop application</li>
+		<li>mobile application</li>
+		<li>web application</li>
+	</ul>
+	<p>Saas: Software as service - cloud software.</p>
+
+	<h2>Applications of javascript:</h2>
+	<ul>
+		<li>node.js - web application</li>
+		<li>electron.js - desktop application</li>
+		<li>React native - mobile application</li>
+		
+	</ul>
+
+	<img src="images/javascript.png">
+
+	<h2>Why javascript in web development</h2>
+	<p>when a form is filled and sent to server, server validates the form , if there is any mistake in entries, data are discarded and server ask to refill the correct data. In low band-width senting the worng form and asking the user to refill is not good. so, a validator has to be written in client-side using a programming language.</p>
+	<p>Past days there are only two browsers explorer and netcafe. Brendan Eich who worked in netcafe invented a scripting language prototype in 10 days called javascript(scripting language) initially named as mocha then livescript and then javascript as java programming language was popular.</p>
+	<p>Internet explorer (copied) reverse engined javascript and made jscript. both started adding features to make programmers choose their languages. jscript wont work on netcafe and vice verse. So www become trouble as a webpage should appear in all browsers.site best view based on languages is summited so Then javascript was summited to ecma asking them to form a scripting language standard. since they formed the standard it is called as ecmascript. Ecmascript is a standard and javascript is a language following ecmascript.</p>
+
+	<h2>DOM (DOCUMENT OBJECT MODEL) BOM (BROWSER OBJECT MODEL) </h2>
+	<h2>Embedding javascript in html:</h2>
+<!--	<script >
+		alert("hello world");
+		console.log("hello world");
+	</script>-->
+	<P>type="text/javascript" - if this is omitted, by default it will add it.</P>
+	<p>In xhtml, script will be like</p>
+<!--		<![CDATA[
+			alert('alert');
+			console.log('hello world');
+		]]>-->
+
+	<h2>External javascript:</h2>
+<!--	<script type="text/javascript" src="javascript.js"></script>-->
+	<p>Add the file in head tag or inside body after all body elements.<br> Advantage in placing the js file at end of body is,after all elements loaded js file is loaded. When js is included in head, after loading js file body (web page) is loaded (render) making the page loading slow This is called Render - blocking js<br> when website visitors no is calculated, a visitor can open the site and before the js loaded (present in end of body) the visitor may close the tab. In this suivation js should be placed in head. So it depend on the purpose wethere the js should be placed in head or end of body.
+	</p>
+
+	<h2>No script tag</h2>
+	<p>User might blocked the javascript in browser to avoid ads. So to indicate : javascript should be enabled for working for this site ,No script tag is used. This works only when javascript is blocked in browser settings.</p>
+	<noscript>
+		<h2> javascript should be enabled for working of this site.</h2>
+	</noscript>
+
+	<h2>Constant and variable</h2>
+	<p>Constant is only in ES6 not in ES5. PI=3.14 is a contant. <br> Variable, who value change.<br> PI is a indentifier.</p>
+
+	<h2>Indentifier naming rules:</h2>
+	<p>PI=3.14.PI is a indentifier.<br> First character should be an alphanumerical, underscore or dollar symbol. <br> Other character may be alphanumerical, underscore or dollar symbol. <br> Should not use keywords and reserved words as identifier. <br> Traditionally camelCase is used.z</p>
+
+	<h2>Javascript syntax:</h2>
+	<p> JS is case sensitive language. Statements end with ; it is optional to use ; but there are some place where it is compulsory to use ;. so avoid the confusions use ;  </p>
+
+	<h2>Comments:</h2>
+	<p>single line comments use // <br> multiline uses /**/</p>
+
+	<h2>Variable declaration and assignments</h2>
+	<p>var keyword is used to declare variable. Datatypes are not used in declaration. Like python they are automatically given datatypes. There are 5 datatypes.</p>
+<!--	<script type="text/javascript">
+		var str = "hello im a variable"
+		console.log(str);
+	</script>-->
+
+	<h2>Datatypes</h2>
+	<h3>Primitive data type:</h3>
+	<ul>
+		<li>Number - integer, float, double all types stored as number datatype. Octals are stored using 0 prefix and hexadecimal are stored using 0x prefix.<br>IN C -32,768 - 32767 can be stored but in javascript it varies from browser to browser.To know that Number.MAX_VALUE and Number.MIN_VALUE is used. When number greater than or lesser than the range is used - infinity and infinity will be displayed.</li>
+		<li>String - character and string are represented as String data type.""15"==15" - inside "" '' should be used and vice versa. if not error will occur. "'15'==15"(refer relational operators)</li>
+		<li>Boolean - true false. 0 and 1 are not equal to true and false.</li>
+		<li>Null - empty.</li>
+		<li>Undefined - variable that are not initialized are undefined type.</li>
+	</ul>
+	<h3>Reference data type:</h3>
+	<ul>
+		<li>object</li>
+	</ul>
+<!--	<script type="text/javascript">
+		var num = 3;//number type
+		var num1 = 3.1; //number type
+		var ocn = 02; //octal value is also number type
+		var hen=0xFF; //hexadecimal value is also number type
+		var en=1.6e6; //exponential form 1.6 * 10,00,000
+		console.log(num,num1,ocn,hen,en);
+
+		console.log(Number.MAX_VALUE,"\n",Number.MIN_VALUE); //max and mini number range
+
+		var pinf = Number.MAX_VALUE + Number.MAX_VALUE; //Infinity
+		var ninf = -10/0; //- Infinity
+		console.log(pinf,ninf);
+
+		var c="c"; //string type
+		var s= 'String'; //string type
+		console.log(c,s);
+
+		var t=true; // boolean
+		var f = false; //false
+		console.log(t,f);
+
+		var nu=null; // null type
+		var ns=''; //"" is displayed - empty string
+		console.log(nu,ns); 
+
+		var undef; //undefined
+		console.log(undef);
+		
+	</script>-->
+
+	<h2>Js : loosly or weakly typed language and typeof</h2>
+	<p> JS variable can change their datatype like python. var i = 0; later i = 'h'; <br>typeof i - type of data i holds is displayed. <br>i=null type is object which is worng but before they find this may sites have used it in their websites so they didnt correct it. </p>
+
+<!--	<script type="text/javascript">
+		var i=0; //number type
+		console.log(i); 
+		console.log(typeof i);
+
+		i = 'h'; //string type
+		console.log(i);
+		console.log(typeof i);
+
+		i = null; //object type
+		console.log(i);
+		console.log(typeof i);
+	</script>-->
+	<h2>Arithmetic operators</h2>
+	<ul>
+		<li>Addition (+) - 10+20 is expression 10,20 are operands + operator. </li>
+		<li>Substraction (-) </li>
+		<li>Multiplication (*)</li>
+		<li>Divition (/) - quationt </li>
+		<li>Modulus (%) - remainder  </li>
+	</ul>
+<!--	<script type="text/javascript">
+		var r = 10 +20; 
+		console.log(r);
+
+		r = 20 -10;
+		console.log(r);
+
+		r = 10 *20;
+		console.log(r);
+
+		r = 20 /10;
+		console.log(r);
+
+		r = 20 % 10;
+		console.log(r);
+	</script>-->
+	<h2>Unary operator - one operand</h2>
+	<ul>
+		<li>- operand</li>
+		<li>+ operand</li>
+		<li>-- operand or operand--</li>
+		<li>++ operand or operand ++</li>
+	</ul>
+<!--	<script type="text/javascript">
+		var a =5;
+		console.log(-a);
+
+		a= -5;
+		console.log(+a);
+
+		a=1;
+		//postfix
+		console.log(a++); //gives the value 1 to log and increments to 2 
+		console.log(a); //2
+		//prefix
+		console.log(++a); //increments to 3 and gives to log
+
+		a=3;
+		//postfix
+		console.log(a--); //gives the value 3 to log and decrements to 2
+		console.log(a); //2
+		//prefix
+		console.log(--a); //decrements to 1 and gives to log
+
+	</script>-->
+	<h2>Type coersion</h2>
+	<p>In js, + used to add two string, a string and a integer(converted to string),..<br>(if a number input is misentered as string) if - is used to substract a number from text,NAN- not a num is displayed, it is value interger like infinity. When a expression's result is expected a an interger and it is in someother input then NAN is displayed. </p>
+<!--	<script type="text/javascript">
+		var h="hello"
+		console.log(h+" world"+"!"); // concatination
+
+		console.log(h+101);
+
+		console.log(2019 - "age mientered as string"); //NaN
+	</script>-->
+	<h2>Relational and logical operators</h2>
+	<ul>
+		<li>less than < </li>
+		<li>greater than > </li>
+		<li>less than equal to <=</li>
+		<li>greater than equal to >=</li>
+		<li>equal to == (loosly equal to, because 15 == "15" as "15" is type coersion to interger.)</li>
+		<li>not equal to !=</li>
+		<li>indentical to === (strictly equal to, type coersion wont happen)</li>
+		<li>not indentical to !==</li><br><br>
+		<li>logical operators works on boolean value(operands), if operands are not boolean they are converted to boolean.Converted boolean operands are called truthy and falsy values. INTERGER 15 is converted to true - truthy value. "false, 0, ''(empty string),null, undefined, NaN" are converted to falsy values other then this all are converted to truthy values</li>
+		<li>NOT !</li>
+		<li>OR || - .if any one value is true then true. So if left operand is true it wont check the second operand, it returns true </li>
+		<li>AND && - if both value is true then true. So left operand is false it wont check the second operand, it returns false. If 1st operand is true then 2nd operand is checked and then result is given.</li>
+	</ul>
+<!--	<script type="text/javascript">
+		console.log("10 > 5", 10>5); //relation operators
+		console.log("'15' == 15","15"==15); //equal
+
+		console.log("'15' === 15","15"===15); // indentical 
+
+		console.log("'yes' || null",'yes' || null); // is a string truthy and null false so returns yes
+		console.log("null || undefined",null || undefined); // both are falsy so returns undefined right operand.
+		console.log("false || null  ",false || null); //null is return
+		// USer input is given.
+		var user;
+		//input statements
+		user=user || 0; // if user has value user is stored . If not null is stored.
+
+		console.log("0 && null",0 && null); // 1st operant is false so false returns 1st value.
+		console.log("0 && 1",0 && 1); // return 1st value
+		console.log("1 && 0",1 && 0); // 1st operant is true so checks 2nd operand ,false retruns 2n operand
+		console.log("1 && 5",1 && 5); //// 1st operant is true so checks 2nd operand ,true retruns 2n operand
+	</script>-->
+
+	<h2>conditional operator</h2>
+	<p>boolean expression ? true : false; - works same as java c++</p>
+<!--	<script type="text/javascript">
+		var b =15 != 15 ? "yes": "no";
+		console.log('15 != 15 ? "yes": "no";', b);
+	</script>-->
+	<h2>Assignment operator</h2>
+	<ul>
+		<li>"+="</li>
+		<li>"-="</li>
+		<li>"/="</li>
+		<li>"%="</li>
+		<li>"*="</li>
+	</ul>
+	<h2>Bitwise operator:</h2>
+	<h2>If and if else statements</h2>
+<!--	<script type="text/javascript">
+		var a=10, b=20;
+		if (a>b) {
+			console.log("a is greater");
+		}
+		else {
+			console.log("b is greater");
+		}
+		if(a%2==0)
+		{
+			console.log("a is odd");
+		} 
+	</script>-->
+	<h2>Alert</h2>
+	<p>Alert(); - displays a pop up box in window. Untill the box is closed(press ok) no other content in webpage can be accessed.</p>
+<!--	<script type="text/javascript">
+		alert("hello javascript");
+	</script>-->
+	<h2>Prompt</h2>
+	<p>To get input from user. prompt("prompt string", default value ); - if user didnt enter the value default value will be there</p>
+<!--	<script type="text/javascript">
+		var name = prompt("enter your name", " anonymous"); //no input anonymous is assinged name.
+		alert("HI"+name);
+
+	</script>-->
+	<h2>Confirm</h2>
+	<p>Confirm("prompt string"); - a dialog box displaying prompt string with yes no buttons. If yes is pressed true is returned else falsse is returned.</p>
+<!--	<script type="text/javascript">
+		var age=prompt("enter your age",0);
+		if (age<=18) {
+			var p = confirm("do u have parent permission");
+			if (p){
+				alert("allowed");
+			}
+			else{
+				alert("not allowed");
+			}
+		}
+		else{
+			alert("allowed");
+		}
+	</script>-->
+	<h2>Loops:</h2>
+	<ul>
+		<li>For loop: - predefined numbers of times. alarm everyday of week (7) days</li>
+		<li>while loop: - until condition is false</li>
+		<li>Do while loop: - until condition become false</li>
+	</ul>
+<!--	<script type="text/javascript">
+		do{
+			console.log("playing"); //number of time printed will displayed in left .
+			var play = confirm("do want to continue..");
+		}while(play);
+
+
+		var Things = [1,2,3,4,5];
+		for (var i = Things.length - 1; i >= 0; i--) {
+			console.log(Things[i]);
+		}
+
+		var i = 10;
+		while(i>=0){
+			console.log("love you");
+			i --;
+		}
+	</script>-->
+
+	<h2>Break &amp; continue</h2>
+	<p>Break - exit the control from the loop <br> continue - skip the statements below continue.</p>
+<!--	<script type="text/javascript">
+		var i = 10
+		for(; i>=0; )//not recommented method
+		{
+			console.log(i);
+			if(i==5)
+			{
+				console.log("break");
+				break;
+			}
+			i--
+		}
+
+		var ii = 1;
+		while(ii<=10){
+			if(ii % 2 ==0){
+				ii++;
+				console.log("continue");
+				continue;
+			}
+			console.log(ii);
+			ii++;
+		}
+	</script>-->
+
+	<h2>Switch statement: - way as c++ and else if statement</h2>
+	<p>Switch statement: - way as but it works with all datatypes in conditions. while checking with cases and condition it checks without type case. switch(15){case "15":} - 15 and "15" will not be matched. </p>
+<!--	<script type="text/javascript">
+
+		var a ="a";
+		if (a=="e") {
+			console.log("vowels");
+		}
+		else if (a=="i") {
+			console.log("vowels");
+		}
+		else if (a=="o") {
+			console.log("vowels");
+		}
+		else if (a=="u") {
+			console.log("vowels");
+		}
+		else if (a=="a") {
+			console.log("vowels");
+		}
+		else {
+			console.log("consonent");
+		}
+
+		// to reduce complexity switch is used
+		switch(a)
+		{
+			case "a":
+			case "e":
+			case "i":
+			case "u":
+			case "o": console.log("vowels"); break;
+			default:{
+				console.log("consonent");
+			}
+		}
+
+		switch("hello world")
+		{
+			case "hello" + " world":console.log("hi"); break;
+			default:console.log("go away"); 
+		}
+
+		switch(true){
+			case 15 == 15 || 15 === 15: console.log("love 1 5 "); break;
+		}
+	</script>-->
+	<h2>Functions : named set of statements. varaibles in function header is parameters. variables in calling statement is argument. IN JS function IS A DATATYPE.</h2>
+	<pre>
+		function functionName(para1, para2)
+		{
+			statements;
+		}
+		fuctionName(arg1,arg2);
+	</pre>
+<!--	<script type="text/javascript">
+		function welcome(msg,name){
+			if(name) 
+			{
+				console.log(msg + name);
+			}
+			else{
+				console.log(msg + "anonymous");
+			}
+		}
+
+		welcome("welcome","niffya");
+		welcome(name="niffya",msg="welcome");  // welcome is assigned to name and viceversa. to corresponding elements.
+		welcome("welcome"); //when name is not given as argument its value is undefined.
+	</script>-->
+	<h2>Function in javascript:</h2>
+	<p>new definition of function will override the old definiton of function(overwrites). so function overloading is not possible. THis show there is no signature to the function</p> 
+<!--	<script type="text/javascript">
+
+		function dup(){
+			console.log("original");
+		}
+
+		function dup(mess) // lastly written function is the definition of dup function.
+		{
+			console.log("duplicate");
+			if (mess) {
+					console.log(mess);
+			}
+		}
+		dup();
+		dup("overrides");
+	</script>-->
+	<h2>return</h2>
+	<p>javascript fuctions dont have return types. return statements are optional. If no return statement undefined is returned. </p>
+<!--	<script type="text/javascript">
+		function hello(){
+			console.log("inside function");
+		}
+		var returnvalue = hello();
+		console.log(returnvalue);
+		function hellor(){
+			return"returing a string";
+		}
+		returnvalue = hellor();
+		console.log(returnvalue);
+	</script>-->
+	<h2>Reference type</h2>
+	<p>JS is a oop language. object means object . object definition is like class but not exactly like class.</p>
+<!--	<script type="text/javascript">
+		var person = new Object(); //person is the reference of object, object() is a consturctor
+		console.log(person instanceof Object); //instanceof is like typeof . true because person is the instance of obeject
+
+		person.name = "bhoo"; //property
+		person.profession = "my kid"; //property
+		console.log(person.name);
+		console.log(person.profession);
+
+		person.sayHi = function ()  //method
+		{
+			console.log("HI " + person.name);
+
+		}
+
+		person.sayHi();
+
+	</script>-->
+	<h2>Difference berween primitive and reference type:</h2>
+	<p> when a value is assigned to a variable its type is checked and according to its type space in memory is allocated.In primitive datatype, memory is in fixed size(number - 8 bytes, bool = 1 byte). When the datatype is reference, cannot be stored in fixed in size (objects and methods are added whenever needed). </p>
+	<p>Person - two properties (name and profession) , method (sayHi) - is added.</p>
+	<pre>
+		var num1 = 10;
+		var num2 = num1;
+		var person = new Object();
+		var person1 = person;
+		num2 =20;
+	</pre>
+	<p>Premitive datatypes are stored in stack<br>Reference datatype are stored in heap.<br>num1 = 10 and num2 =20 are in stack. person is also in stack but its value is present in heap, person(pointer) have refercence(pointing to the heap memory location) of the heap. Person is assigned to person1, actually person and person1 have same references. person1 is given person's reference(like python call be refernce, when a object is assigned to another both work on same value)</p>
+	<img src="images/rep.png" width="700">
+
+<!--	<script type="text/javascript">
+		var num1 = 10; //primitive type
+		var num2 = num1; // only value is assigned
+		console.log("num1",num1,"num2",num2);
+
+		var person = new Object(); // reference datatype 
+		var person1 = person; // object reference is assigned, both objects are point to same location.
+
+		num2 =20; // value is assigned to num2 no change in num1
+		console.log("num1",num1,"num2",num2);
+
+		person.obj1="eesa-person"; // value assigned to person
+		console.log(person1.obj1,"person1.obj1");
+		console.log(person.obj1,"person.obj1");
+
+	//	person1.obj1 = "bhoo-person1"; //value is assigned to person1
+	//	console.log(person1.obj1,"person1.obj1");
+	//	console.log(person.obj1,"person.obj1");
+
+	//	person.obj2="bhoo-person-obj2";
+	//	console.log(person,person1);
+
+	</script>-->
+	<h2>Understanding Objects:</h2>
+	<p>An object can be a collection of primitive or reference(function is also a reference datatype) or both datatypes. Identifier used for (datamembers) denoting object variables are called PROPERTIES.</p>
+	<h2>Two Ways to create a object:</h2>
+	<ul>
+		<li>
+			constructor:<br>
+			<pre>
+				//var objectname = new Object();
+				var user1 = new Object();
+
+				user1.name="eesa";
+				user2.profession="developer";
+
+				user1.hello=function()
+				{
+				console.log(name+profession+"!");
+				}
+			</pre>
+		</li>
+		<li>
+			Object literal:<br>
+			<pre>
+				//var objectname = {};
+				var user2 = {
+					name = "bhoo";
+					profession = "HR";
+					hello=function()
+						{
+							console.log(name+profession+"!");
+						}
+				};
+			</pre>
+		</li>
+	</ul>
+<!--	<script type="text/javascript">
+		var user1 = new Object();
+
+				user1.name="eesa";
+				user1.profession="developer"; //user2.profession="developer";- Uncaught TypeError: Cannot set property 'profession' of undefined
+
+				user1.hello=function()
+				{
+				console.log(user1.name+user1.profession+"!");
+				}
+		var user2 = {
+					name: "bhoo",
+					profession: 'hr',
+					hello: function()
+						{
+							console.log(user2.name+user2.profession+"!");
+						}
+				};
+		console.log("user1: ",user1);
+		console.log("user2: ",user2);
+		user1.hello();
+		user2.hello();
+		//name = "bhoo", Uncaught SyntaxError: Invalid shorthand property initializer
+
+		var user3 = user2;
+		user3.hello();
+		user2=null;
+		//user3.hello(); //Uncaught TypeError: Cannot read property 'name' of null at Object.hello (jsindex.html:550) at jsindex.html:562
+		console.log(user2);
+
+	</script>-->
+	<p>user3.hello(); //Uncaught TypeError: Cannot read property 'name' of null at Object.hello (jsindex.html:550) at jsindex.html:562</p>
+	<p>Because in class user2, property name is acessed as user2.name. So when user2 is assigned null, error occures to overcome this keyword is used.</p>
+<!--	<script type="text/javascript">
+		var user2 = {
+					name: "bhoo",
+					profession: 'hr',
+					hello: function()
+						{
+							console.log(this.name+this.profession+"!");
+						}
+				};
+		var user3 = user2;
+		user3.hello();
+		user2=null;
+		console.log(user2);
+		console.log(user3);
+		user3.hello();
+
+	</script>-->
+	<p>Now when user2.hello(); is called user2.name is used and when user3.hello(); is called user3.name is used. so it works</p>
+	<h2>Appending properties to objects:</h2>
+<!--	<script type="text/javascript">
+		var user2 = {
+					name: "bhoo",
+					profession: 'hr',
+					hello: function()
+						{
+							console.log(this.name+this.profession+"!");
+						}
+				};
+		//user2.sur name = "loganathan"; //space in a variable name is a syntax error.
+		user2['sur name'] = "loganathan";
+		console.log(user2['sur name']);
+
+		var prop = "sur name";
+		console.log(user2[prop]);
+
+	</script>-->
+	<h2>Accessing properties in class using loop:</h2>
+	<pre>
+		for(variable in iterablevariable):
+		{
+			statements;
+		}
+	</pre>
+<!--	<script type="text/javascript">
+		var user2 = {
+					name: "bhoo",
+					profession: 'hr',
+					hello: function()
+						{
+							console.log(this.name+this.profession+"!");
+						}
+				};
+		//user2.sur name = "loganathan"; //space in a variable name is a syntax error.
+		user2['sur name'] = "loganathan";
+		for (prop in user2) {
+			console.log(prop);
+			console.log(user2[prop]);
+		}
+		</script>-->
+		<h2>Proto property:</h2>
+		<p>A new object created using object constructor have a prototype (proto) property.</p>
+		<img src="images/defaultproperties.png">
+<!--		<script type="text/javascript">
+			var default1 = new Object();
+			console.log(default1);
+		</script>-->
+		<h2>Instance of object</h2>
+		<p> default1 instanceof Object - will check constructor of default1 is Object(); If yes returns true.</p>
+		<h2>hasownproperty();</h2>
+		<p>Before using a property, whether it is present in the object ( user defined properties only)is checked using hasownproperty();</p>
+<!--		<script type="text/javascript">
+			var obj = new Object();
+			console.log(obj instanceof Object); //true
+			obj.name = "eesa";
+			console.log(obj.hasOwnProperty(name)); //false
+			console.log(obj.hasOwnProperty('name')); //true
+			console.log(obj.hasOwnProperty('name')); 
+			console.log(obj.hasOwnProperty('Object'),"proto property"); 
+			console.log(obj.toString()); //a object cant be converted to string so object object is displayed.
+			console.log(obj.valueOf()); //values in objects are displayed 
+		</script>-->
+		<p>obj.hasOwnProperty('name'); - checks name property is defined in obj(user-defined properties).<br>obj.hasOwnProperty('Object') - returns false because it is a proto property not user defined property. </p>
+
+		<h3>Data Property Attributes: (obj.name = " "; - name is data property and it has some attributes)</h3>
+		<p>(obj.name = " "; - name is data property and it has some attributes. <br>[configurable] - if it is true (default all attr values are true except value.) variable attributes can be changed else not. <br> [Enumerable] - if it is false this value will not appear in loop. <br> [Writable] - value is writabe or it is readable. <br> [Value] - actual value is assigned here  </p>
+
+<!--	<script type="text/javascript">
+			var emp = {
+				name: "eesa"
+			};
+			console.log(emp.name);
+			emp['name'] = "bhoo"; // writable is true
+
+			console.log(emp.name);
+
+			Object.defineProperty(emp, 'salary',{
+				configurable: true,
+				writable: false,
+				enumerable : true,
+				value : 800
+			});
+
+			emp.salary = 700; //no error
+			console.log(emp.salary) // 800 - because writable is false.
+
+			for(pro in emp){
+				console.log(emp[pro]); //salary appears
+			}
+
+			Object.defineProperty(emp, "salary" ,{
+				enumerable: false
+			});
+
+			for(pro in emp){
+				console.log(emp[pro]); //salary wont appears in iteration.
+			}
+
+			emp.position = "HR";
+			console.log(emp.position);
+
+			delete emp.position; //positions variable is deleted not only the value.
+			console.log(emp);
+			console.log(emp.position , " deleted");
+
+			//to make that diable
+		/*	emp.position="HR";
+			Object.defineProperty(emp,"position",{
+				configurable : false //configurable is false so cant change further defalut attributes enum,.. assign the value before making the configurable false.
+			});
+
+			console.log(emp);
+			console.log(delete emp.position); //returns false it cant delete the emp.position value.
+			console.log(emp.position); */
+			
+
+		</script>-->
+
+		<h2>Accessor property: and private attribute: </h2>
+		<p>[set] and [get] - are used to assign a value and get a value from a object variable. THis methods returns the value(get) present in the variable.</p>
+		<p>bonus variable has to be incremented in yearly bases. so it cannot be writable. If the yoj is present year there should not be a bonus. Bonus should be made private to avoid unauthoried change.</p>
+<!--		<script type="text/javascript">
+
+		/*	emp = {
+				name : "eesa",
+				yoj: 2019
+			}
+			*/
+
+			var emp = {
+				name : "eesa",
+				yoj: 2010, //change 2019 and see the output
+				_bonus : 0
+			};
+			
+			Object.defineProperty(emp,"bonus",{ //bonus is not _bonus it is emp.bonus=10; bonus.
+				get: function()
+				{
+					return this._bonus; 
+				},//comma is imp orelse un
+
+				set: function(bonusnew)//bonusnew is 10
+				{  
+					if (bonusnew <= 20 && this.yoj < 2019) {
+						this._bonus = bonusnew;
+					} //else the _bonus will remain 0 and bonus is also 0
+				}
+			});
+
+			 emp.bonus = 10;//Invokes the setter function , and value is assigend to the bonusnew.
+			console.log(emp);
+
+		</script>-->
+
+		<h2>TO define multiple properties:</h2>
+		<p>ddefine all the four attributes(enum, writable, value, config)</p>
+<!--		<script type="text/javascript">
+			var emp={}
+
+			Object.defineProperties(emp,{
+				name:{
+					value:"eesa",
+				configurable:false
+			},
+			salary:{
+				value:20000,
+				writable:false //default false
+			},
+			yoj:{
+				value:2000,
+				writable:true
+			},
+			_bonus:{
+				value:0,
+				writable:true
+			},
+			bonus:{
+				get:function(){
+					return this._bonus;
+				},
+				set: function(bonusnew){
+					if (bonusnew <= 20 && this.yoj < 2019) {
+						console.log("this._bonus");
+						this._bonus = bonusnew;
+					}
+				}
+			}
+
+			});
+
+			//emp.bonus=17;
+			//console.log(emp);
+			//emp.yoj=2020;
+			//emp.bonus=10;
+			//console.log(emp);
+		</script>-->
+
+		<h2>Creating a object:</h2>
+		<p>so far we created a instance of object using {} object literal or object() cnstructor . But it won be helpful in programming when u have to create a object for 1000 emp. each time the name: desigination: salary: need to be typed</p>
+		<pre>
+			emp={
+			name:"eesa",
+			designation: "HR",
+			salary: 20000
+		}
+		emp1={
+			name:"eesa",
+			designation: "HR",
+			salary: 20000
+		}
+		emp2={
+			name:"eesa",
+			designation: "HR",
+			salary: 20000
+		}
+		.
+		.
+		so on
+		also
+
+
+		socialmedia ={
+		name: "youtube",
+		streamer: true
+	}
+
+		</pre>
+		<p>both are social media and emp are different objects, used for different purpose but both are instance of same Object.</p>
+
+<!--		<script type="text/javascript">
+			emp2={
+			name:"eesa",
+			designation: "HR",
+			salary: 20000
+		}
+		console.log(emp2 instanceof Object);
+
+		socialmedia ={
+		name: "youtube",
+		streamer: true
+	}
+		console.log(socialmedia instanceof Object);
+
+		</script>-->
+		<h2>Creating class and objects:</h2>
+		<pre>
+			function Employee(name,designation,salary) //class name starts with caps
+			{
+				this.name=name;
+				this.designation=designation;
+				this.salary = salary;
+			}
+
+			//class definition
+
+			var emp1 = new Employee("eesa","developer",45000);
+			console.log(emp1);
+
+			//object declaration
+		</pre>
+		<!--<script type="text/javascript">
+			function Employee(name,designation,salary) //class name starts with caps
+			{
+				this.name=name;
+				this.designation=designation;
+				this.salary = salary;
+			}
+
+			var emp1 = new Employee("eesa","developer",45000);
+			console.log(emp1);
+
+		</script>-->
+
+		<h2>Function call vs constructor</h2>
+		<p>function keyword is used to create both function and class.</p>
+		<pre>
+			function Employee() 
+			{
+				//statements
+			}
+
+			Employee(); // function call - returns undefined as the fucntion
+			 is not defined yet (no statements in it)
+
+			new Employee(); - returns a empty class objects. 
+			Because it acts as a constructor call because of new keyword.
+
+			//implicitly returns this.(current object)
+
+			console.log(sm instanceof Object); //both are instance of object. 
+			Because all reference types base class is object(), all inherites Object class.(prototypal inheritance.)
+		</pre>
+<!--		<script type="text/javascript">
+			function Employee() 
+			{
+				//statements
+			}
+
+			console.log(Employee());
+			console.log(new Employee());
+
+			var emp = new Employee();
+
+			function socialmedia() 
+			{
+				//statements
+			}
+
+			var sm = new socialmedia();
+
+			console.log(sm instanceof socialmedia); //true
+			console.log(emp instanceof Employee); //true
+
+
+			console.log(sm instanceof Object); //both are instance of object. 
+			console.log(emp instanceof Object);
+		</script>-->
+
+		<h2>methods in class</h2>
+
+<!--		<script type="text/javascript">
+			function Employee(name,designation,salary) //class name starts with caps
+			{
+				this.name=name;
+				this.designation=designation;
+				this.salary = salary;
+
+				this.display =function()
+				{
+					console.log(this.name,this.designation,this.salary);
+				}
+			}
+
+			var emp1 = new Employee("eesa","developer",45000);
+			console.log(emp1.display());// returns undefined.
+		</script>-->
+
+		<h2>Array:</h2>
+
+		<p>Array can store contigious data of "any" datatype. Array is also have two sytax, array constructor syntax and array literal sytax. Array is also a reference type.</p>
+		<pre>
+			var Employee = {
+			name: " hello",
+			salary: 40000
+		};
+			
+			var arraycons = {
+			0: "hello",
+			1: 4000,
+			2: null,
+			3: true
+		} // this is why array is reference type. //internally, other way to define it.
+		</pre>
+		<p>Array is a object with numberic property names "0 1 2 3"</p>
+		<h2>Constructor syntax:</h2>
+		<pre>
+			var arr = new Array();
+			var arr2 = new Array(10);
+			// arr2 is created with 10 empty slots. Its length(proto variable) = 10.
+			var frontend = new Array("html","css","js"); length = 3 (0 1 2)
+		</pre>
+<!--		<script type="text/javascript">
+			var Employee = {
+			name: " hello",
+			salary: 40000
+		};
+			
+			var arraycons = {
+			0: "hello",
+			1: 4000,
+			2: null,
+			3: true
+		};
+
+		var arr1 = new Array(10);
+		console.log(arr1);
+		console.log(arraycons);
+
+		var frontend = new Array("html","css","js");
+		console.log(frontend);
+
+		</script>-->
+
+		<h2>literal syntax</h2>
+		<pre>
+			var arr = [];
+			var arr1 = [undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined]; //10 empty
+			var frontend = ["html","css","js"];
+		</pre>
+		<p>. cant be used to access elements only [] can be used in array and . operator to acess the proto properties.</p>
+<!--		<script type="text/javascript">
+			var arr = [];
+			var arr1 = [undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined]; //10 empty
+			var frontend = ["html","css","js"];
+			console.log(arr1);
+			console.log(frontend);
+
+			console.log(frontend[0]);
+			console.log(frontend.length);
+		</script>-->
+		<h2>Add new elements to the array:</h2>
+<!--		<script type="text/javascript">
+			var frontend = ["html","css","js"];
+			console.log(frontend);
+
+			 frontend[3]= "Json";
+			// problem
+			frontend[99] = "api";
+			// so lenght of array is 100
+
+			//use methods of Array
+
+			
+
+		</script>-->
+		<h2>Array</h2>
+		<pre>
+			console.log(frontend instanceof Array); // true, but wont work sometimes
+			console.log(Array.isarray(frontend))
+		</pre>
+<!--		<script type="">
+			var frontend = ["html","css","js"];
+			console.log(Array.isArray(frontend));
+			console.log(frontend instanceof Array);
+		</script>-->
+
+		<h2>Overriding proto functions</h2>
+	<!--	<script type="text/javascript">
+			var user = {
+				name: "eesa",
+				toString:function()
+				{
+					console.log("hi" + this.name);
+				},
+				toValue:function(){
+					return true;
+				}
+			}
+
+			console.log("toString and toValue are overrided");
+			user.toString();
+			console.log(user.toValue());
+		</script>-->
+		<h2>Array conversions: methods</h2>
+
+		<ol>
+			<li>toLocaleString()</li>
+			<li>toString()</li>
+			<li>valueOf()</li>
+			<li>join()</li>
+		</ol>
+<!--		<script type="">
+			var frontend = ["html","css","js"];
+			console.log(frontend.toLocaleString()); //local supported string
+			console.log(frontend.toString());
+			console.log(frontend.valueOf());
+			alert(frontend.valueOf()); //alert converts value to string before displaying it
+			console.log(frontend.join(' - ')); //joins all element and return a string
+			console.log(frontend.join());
+			console.log(frontend.join('+'));
+		</script>-->
+
+		<h2>Array stact methods: </h2>
+		<p>	LIFO -last in first out. <br> push() - to insert. <br> pop() - to remove.</p>
+<!--		<script type="text/javascript">
+			var stackarray = new Array("book 1 ", "book 2 ", "book 3 ", "book 4 ", "book 5 ", "book 6 ","book 7 ", "book 8 ", "book 9");
+			console.log(stackarray);
+
+			var push1 = stackarray.push("book 10"); //returns array lenght
+			console.log(push1);
+
+			stackarray.push("book 11 ", "book 12", "book 13 ", "book 14 ");
+			console.log(stackarray);
+
+			
+
+			var popped = stackarray.pop();
+			console.log(stackarray);
+			console.log(popped);
+
+			console.log(stackarray.length);
+
+	
+		</script>-->
+
+		<h2>Array queue methods</h2>
+		<p>FIFO - first in first out, push() - to insert. shift ()- removes fisrt element.</p>
+		<p>pop() - removes last element. shift() - removes first element. unshift() - adds the element to the first.</p>
+<!--		<script type="text/javascript">
+			var todolist = ["eating", "brushing", "sleeping"];
+			console.log(todolist)
+
+			var lengt = todolist.push("powernap", "youtube");
+			console.log(todolist);
+			console.log(lengt);
+
+			var shifted = todolist.shift();
+			console.log(todolist);
+			console.log(shifted);
+			console.log(todolist.length);
+
+			todolist.unshift(shifted);
+			console.log(todolist);
+
+		</script>-->
+
+		<h2>Array reordering methods</h2>
+		<ol>
+			<li>reverse()</li>
+			<li>sort() - because sort 1st convert elements to string and sorts, so number type array sorting is not useful.</li>
+		</ol>
+
+		<script type="text/javascript">
+			var li = [1,3,4,5,6];
+			console.log(li)
+			li.reverse();
+			console.log(li);
+
+			var marks = [45,56,432,10,2343,];
+			console.log(marks)
+			marks.sort();
+			console.log(marks)
+
+			marks.push(100);
+			console.log(marks)
+			marks.sort();
+			console.log(marks)
+			// because sort 1st convert elements to string and sorts
+		</script>
+
+
+
+
+
+
+
+
+
+
+
+	</body>
+	<style type="text/css">
+		body{
+			width: 80%;
+			margin: 0 auto;
+			background-color: black;
+			color: white;
+			
+		}
+	</style>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

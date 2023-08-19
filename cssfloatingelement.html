@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>floating element</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+	<div id="page1">
+	<h1 id="d1">DEMO</h1>
+
+		<div class ="service">
+			<h2>service1</h2>
+			<p>A</p>
+			<p>paragraph about the picture</p>
+		</div>
+		<div class ="service">
+			<h2>service2</h2>
+			<p>B</p>
+			<p>paragraph about the picture</p>
+		</div>
+		<div class ="service">
+			<h2>service3</h2>
+			<p>C</p>
+			<p>paragraph about the picture</p>
+		</div>
+<!--class ="service1"-didnt worked.display: inline-block;is not used.
+1.use float property 1box floats, remaining space is adjusted to its 2 box, 2nd box floats the last box is adjusted to remaining space.
+2.margin-right: 25px; - to separated each boxes
+3.width: 960px;
+margin: auto; - make the page center.
+4.30%+30%+30%=90%, now the remaining 10 percent should equally divide between 3 boxes. 10/3=3.3% when we used margin-right:3.3% - one boy will come down because its border 1px is taken into account. so use 3%.
+5.33%+33%+33%=99%, now the borders take their space in remaining 1%.-->
+	<style>
+		.service{
+			border:1px solid cyan;
+			width: 30%;
+			float: left;
+			margin-right: 3.1%; 
+			text-align: center;
+		}
+		#page1{
+			width: 960px;
+			margin: 0 auto;
+		}
+		#d1{
+			text-align: center;
+		}
+	</style>
+</div>
+
+</body>
+</html>

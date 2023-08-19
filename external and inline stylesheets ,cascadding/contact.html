@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+		<title>contact</title>
+		<link rel="stylesheet" type="text/css" href="styles.css">
+
+</head>
+<body>
+	<div id="page2">
+	<div id="header2">
+		
+		<h1>Inheritance</h1>
+	</div>
+
+	<div id="content">
+		<div id="left">
+			<h2>page width property:</h2>
+			<p>page2 width is not inherited by the child. heading paragraphs are block level elements so they take full width. If width is inherited all inline elements would acquired page2's width.</p>
+			
+		</div>
+		<div id="main">
+			<p>Child acquires parents properties, this is called inheritance.<br>Embedded styles is used and page2 color is changes(parent), child also get the parent's color.But when padding is given to page parent element it is applied to child elements.<br> properties which make layout collapse(padding margin) are not inherited. properties which make multiple change easy like to change font colour of the page only colour:; in page2 makes the colour change, inheritance makes it easy. or else each and every elements colour should be changed.</p>
+		</div>
+		<div id="nav">
+			<h2>navigation menu</h2>
+			<ul>
+				<li><a href="home.html"> home</a></li>
+				<li><a href="about.html">about</a></li>
+				<li><a href="service.html">service</a></li>
+				<li><a href="gallery.html">gallery</a></li>
+				<li><a href="contact.html">contact</a></li>
+			</ul>
+		</div>
+
+		<br class="bg">
+	</div>
+
+	<div id="footer2">
+		<p>family tree</p>
+	</div>
+	<img id="con" src="familtree.jpg" height="500" width="500">
+	<p style="background-color: black;">For content - html, body, head, page2 are ancestors.<br> header2, footer2 are siblings. <br>left, main, nav are childrens or descendants.</p>
+</div>
+<div id="diseases">
+	<h1>divitis and classitis diseases</h1>
+	<p>only when individual identies and properties are needed id selector should be used. Only when group indentity and properties are needed class selector should be used. some times the content properties should differ from the parent to parent. Content div bgcolor (parent) should be the p and h tags in it. Using div ids and class improperly leads to divitis and classitis diseases.<a href="cssselectores.html"> css selectors</a></p>
+
+
+</div>
+	<style>
+		#page2{
+			color: white;
+			padding: 10px;
+		}
+		#con{
+			margin: 5px auto;
+		}
+		#diseases{
+			background-color: black;
+			color: white;
+		}
+		h1{
+			text-align: center;
+		}
+	</style>
+</body>
+</html>

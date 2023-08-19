@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS Basics</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+
+<!-- syntax of css:
+	<style>
+		body{
+			property:value;
+		}
+	</style>
+
+property- eg.color, a value -eg red is assigned to the property.
+property : value is called as rule
+-->
+<h3>Font color</h3>
+	<style >
+		body{
+			background-color:black;
+			color: white ;
+		}
+	</style>
+<!--Properties uses '-' instead of space eg. background '-'color:--><!-- color - text colors, bgcolor - page backgroung color.
+To change the bg of entire page, bg color property should changed. Entire web page is in body tag(selector).-->
+
+	<style >
+		h2{
+			color: red; 
+		}
+	</style>
+<!-- h2- headings appears in red color-->
+	<style>
+		dl, ol{
+			color: grey;
+		}
+	</style>
+	<dl>
+		<dt>CSS:</dt>
+		<dd>Learning css selectors and properties. Using the properties in right place. You need to keep a list and learn as many props you want.</dd>
+	</dl>
+	<ol>
+		<li>All about fonts</li>
+		<li>Units</li>
+	</ol>
+
+
+<!--TRANSPARENCY AND OPACITY- this ide's bgcolor transparency is 0% and opacity is 100%-->
+<!--TYPOGRAPHY-->
+	<h3> Typefaces </h3>
+<!-- google fonts and try these them-->
+	<ol>
+		<li>serif</li>
+<!--Thin and thick strokes in fonts-->
+		<li>sans serif</li>
+<!--Even thickness fonts. font in ide-->
+		<li>monospace</li>
+<!--Even spacing font eg 55 and 11 have differnt spacing but in monospacing every letters get equal spacing-->
+		<li>Handwriting/cursive</li>
+<!--handwriting like fonts-->
+		<li>Display/fantasy</li>
+<!--dark large width fonts that used to diplay minimum messages and attractivve fonts-->
+	</ol>
+
+	<img src="images/Capture.png">
+
+<!-- to use typefaces-->
+	<style >
+		h3,body{
+			font-family:"Verdana"; 
+		}
+	</style>
+<!-- any font that is supported by the browser that is present in sans-serif will be displayed. if 5 font names and a typeface name is given then any one of that is supported by the browser is displayed if none supported then any supported font from the typeface is diplayed, order shows priorty-->
+
+	<h3>font size</h3>
+	<ul>
+<!--total no pixels in screeen - resolution 500 X 300 = 150000 px .
+pixel font size takes specified amount of pixel from the display.
+problem - when the display size differs because consider less resolution size device 200  x 400  if the h3 tag is giveb 16 px heading is displayed in large size 
+	<script>
+		h3{
+			font-size: 16px;
+		}
+	</script>
+-->
+		<li>Absolute unit: pixels</li>
+
+<!-- Instead of pixels - percentage can be used - 200% means 2 times bigger then the browers font size. The percentage unit is used to define values relative to the immediate parent element.
+<style>
+		h3{
+			font-size: 200%;
+		}
+</style>
+
+-->
+		<li id="1">Percentage</li>
+			<ol>
+				<li id="2">this the fault</li>
+			</ol>
+	
+<!--em and percentage are same. 1em = 100%, 1.2 em =120%
+Problem: <li> is 1.2em when another <li> is nested within it then problem arises. 
+	S1:  <li 1 > will calculate 1.2 em from immediate parent <ul>, all elements in the page has 1em font as body = 1em.
+	S1.1: 120 % of 100% is 120.
+	S2: <li 2> will calculate 1.2 em from immediate parent <li 1>, which is equals to 120%.
+	S2.1: 120 % of 120% is 144. <li 2> is 144.
+	<style>
+		li{
+			font-size:1.2em;
+		}
+		body
+		{
+			font-size: 1em;
+		}
+	</style>
+-->
+		<li>Relative units:Ems</li>
+<!-- rem- instead of calculating the size from the immediate parent, root parent is used, em-body is 1 em (16 font size), li is 1.2em(16*120% =19.00), nexted li is 19*120%=23. rem- body 1 em so li is (16*120% =19.00) and nested li from root (16 body * 120% = 19px)  --> 
+		<li>Relative units: REMs</li>
+		<li>viewport height</li>
+<!--The vh unit in CSS stands for "viewport height." It's a relative unit of measurement that represents a percentage of the height of the viewport, which is the visible portion of the browser window.
+
+Here's how the vh unit works:
+
+    1vh is equal to 1% of the height of the viewport.
+    100vh is equal to the full height of the viewport.-->
+	</ul>
+
+ 	<ul>
+ 		<li>Angle Units:<br>
+
+			    deg (Degrees): Used to specify angles, such as for rotation transforms.<br>
+			    rad (Radians): Another angle unit, commonly used in trigonometric calculations.<br>
+			    grad (Gradians): Less common angle unit, dividing a right angle into 100 gradians. <br>
+		</li>
+    	<li>Duration Units:<br>
+
+			    s (Seconds): Used in animations and transitions to specify durations.<br>
+			    ms (Milliseconds): A smaller unit of time often used in animations and JavaScript functions.<br>
+		</li>
+		<li>Other Units:<br>
+
+			    fr: A unit used in CSS Grid Layout and Flexbox to distribute available space proportionally.<br>
+		</li>
+
+	</ul>
+ 	
+<!--Variation - thickness etc..,-->
+	<h3>font variation</h3>
+	<ul>
+		<li>weight - Thin, light, bold, medium, black, regular - thickness is affected </li>
+		<li>style - italic, oblique,.. </li>
+		<li>strech - streching width of the font. condensenced-decreasing width, streched - increased width from original width</li>
+	</ul>
+ 	<ol>
+ <!--
+ 	<style>
+ 		h2{
+ 			font-size: 4rem;
+ 		}
+ 	</style>
+ 	<style>
+ 		h2{
+ 			font-size: 4rem;
+ 			font-weight: normal;
+ 		}
+ 	</style>
+-->
+ 		<li>weight - normal ,bold</li>
+ <!-- times new roman has italic style with it . so when italic is given a cursive nature can be seen. but when a font dont have the italic it just display the exact font on slanting style
+<style >
+	li{
+		font-family:"times new roman";
+		font-style: italic;
+	}
+</style>
+-->
+ 		<li>style - obliqu, italic</li>
+ 	</ol>
+
+ 	<h3>text transformation</h3>
+ 	<ul>
+ <!--capitalize 1st letter will change capital
+<style>
+ 	h3{
+ 		text-transform: capitalize;
+ 	}
+ </style>
+ -->
+ 		<li>capitalize</li>
+ <!--
+<style>
+ 	h3{
+ 		text-transform: uppercase;
+ 	}
+ </style>
+ -->
+ 		<li>uppercase</li>
+ <!--
+ <style>
+ 	h3{
+ 		text-transform: lowercase;
+ 	}
+ </style>
+ -->
+ 		<li>lowercase</li>
+ 	</ul>
+
+<h3>text decorations :</h3>
+
+ <!--Text decorations 
+ blink: its not user friendly. so browsers dont support that. 
+ Multiple decorators can be used.-->
+ 	<p>  None, underline,overline,line through, blink<br>
+ 	<p><span id="ul">underline</span>, <span id="oln">overline</span>, <span id="lt">line-through and overline</span>, <span id="b">blink</span>, <a href="#">link without none</a>, <a id="n" href="#">linkwithnone</a> 
+	</p>
+	<style>
+		#ul{
+			text-decoration: underline;
+		}
+		#oln{
+			text-decoration: overline;
+		}
+		#b
+		{
+			text-decoration: blink;
+		}
+		#lt{
+			text-decoration: line-through overline;
+		}
+		#n{
+			text-decoration: none;
+		}
+	</style>
+
+	<h3>Line spacing</h3>
+<!-- Span, consider a part of paragharph has to be given styles. <span can be used to group them and id can be created then styles will applied--> 
+<!-- Leading : line spacing-->
+	<p id="linespacing"> LLLLLLLLLINNNNNNNNNNNNNNNNNNNNNNEEEEEEEEEEEEEEESSSSSSSSSSSSSSSSSSSSSSSPPPPPPPPPPPPPPPAAAAAAAACCCCCCCIIIIIIIIIIING
+ 	<span id="ul">inside span ul</span> outttttttsssssssssssiiiiiiide span<span id="oln"> inside span overline and underline</span>  nottt in sssspaan<span id="lt">innnnnnn line through span</span> <span id="b">blink span</span> <a href="#">link without none</a> <a id="n" href="#">linkwithnone</a>.
+ 	
+ 	<p id="no linespacing"> NOLLLLLLLLLINNNNNNNNNNNNNNNNNNNNNNEEEEEEEEEEEEEEESSSSSSSSSSSSSSSSSSSSSSSPPPPPPPPPPPPPPPAAAAAAAACCCCCCCIIIIIIIIIIING
+ 	<span id="ul">inside span ul</span> outttttttsssssssssssiiiiiiide span<span id="oln"> inside span overline and underline</span>  nottt in sssspaan<span id="lt">innnnnnn line through span</span> <span id="b">blink span</span> <a href="#">link without none</a> <a id="n" href="#">linkwithnone</a>.
+	<style>
+	 	#linespacing{
+	 		line-height: 2;
+	 	}
+	 </style>
+	 <!-- font size=10 . line height = 2*10=20. line height = 1.5*10=15. so no units only multiples-->
+
+	 <h2>Text alingment</h2>
+	 <ol>
+	 	<li id="right">right</li>
+	 	<li id="center">center</li>
+	 	<li id="just">justify will work in the paragraph. makes both the sides even</li>
+	 	<li id="left">left</li>
+	 </ol>
+<!--justify will work in the paragraph. makes both the sides even-->
+	 <p id="just"> justified rem- instead of calculating the size from the immediate parent. root parent is used, em-body is 1 em (16 font size), li is 1.2em(16*120% =19.00), nexted li is 19*120%=23. rem- body 1 em so li is (16*120% =19.00) and nested li from root (16 body * 120% = 19px) justified rem- instead of calculating the size from the immediate parent. root parent is used, em-body is 1 em (16 font size), li is 1.2em(16*120% =19.00), nexted li is 19*120%=23. rem- body 1 em so li is (16*120% =19.00) and nested li from root (16 body * 120% = 19px) justified rem- instead of calculating the size from the immediate parent. root parent is used, em-body is 1 em (16 font size), li is 1.2em(16*120% =19.00), nexted li is 19*120%=23. rem- body 1 em so li is (16*120% =19.00) and nested li from root (16 body * 120% = 19px) justified rem- instead of calculating the size from the immediate parent. root parent is used, em-body is 1 em (16 font size), li is 1.2em(16*120% =19.00), nexted li is 19*120%=23. rem- body 1 em so li is (16*120% =19.00) and nested li from root (16 body * 120% = 19px) justified</p>
+<!--non justified default left aligned paragraph-->
+	 <h2>non justified default left aligned paragraph</h2>
+	 <p> justified rem- instead of calculating the size from the immediate parent. root parent is used, em-body is 1 em (16 font size), li is 1.2em(16*120% =19.00), nexted li is 19*120%=23. rem- body 1 em so li is (16*120% =19.00) and nested li from root (16 body * 120% = 19px) justified rem- instead of calculating the size from the immediate parent. root parent is used, em-body is 1 em (16 font size), li is 1.2em(16*120% =19.00), nexted li is 19*120%=23. rem- body 1 em so li is (16*120% =19.00) and nested li from root (16 body * 120% = 19px) justified rem- instead of calculating the size from the immediate parent. root parent is used, em-body is 1 em (16 font size), li is 1.2em(16*120% =19.00), nexted li is 19*120%=23. rem- body 1 em so li is (16*120% =19.00) and nested li from root (16 body * 120% = 19px) justified rem- instead of calculating the size from the immediate parent. root parent is used, em-body is 1 em (16 font size), li is 1.2em(16*120% =19.00), nexted li is 19*120%=23. rem- body 1 em so li is (16*120% =19.00) and nested li from root (16 body * 120% = 19px) justified</p>
+	 
+	 <style>
+	 	#right{
+	 		text-align: right;
+	 	}
+	 	#center{
+	 		text-align: center;
+	 	}
+	 	#just{
+	 		text-align: justify;
+	 	}
+	 	#left{
+	 		text-align: left;
+	 	}
+	 </style>
+
+<!--aligns the inline elements<i b etc> vertically to its neibouring text -->
+	 <h2>Vertical alignment</h2>
+	 <ol>
+	 	<li>baselline</li>
+	 	<li>sub</li>
+	 	<li>super</li>
+	 	<li>top</li>
+	 	<li>text top</li>
+	 	<li>middle</li>
+	 	<li>bottom</li>
+	 	<li>Text bottom</li>
+	 </ol>
+	 <h2>Let us <em>make</em> it simple</h2>
+	 <style>
+	 	em{
+	 		font-size: 2em;
+	 		vertical-align: middle;
+	 	}
+	 </style>
+
+<!--Kerning - space between letters , space between words-->
+	<h3>Kerning</h3>
+	<p id="ker">kerning karo</p>
+<!-- n px (em,%) gap between letters-->
+	<style>
+		#ker{
+			letter-spacing: 3px;
+			word-spacing: 9px; 
+		}
+	</style>
+<!-- Expert kerning - AW seems like the dont have space like II. because aw is given space like ii it will appear as a 2 different letters not as a single word-->
+
+	<h3>Text indent</h3>
+	<p>without indent :wwwwwwwwwwwwwwwwwwwiiiiiiiiiiiiiiiiiiiiittttttttttttttttttttttttthhhhhhhhhhhhhhhhhhhhhhhhoooooooooouuuuuuuuuuuuuuuuttttttttttttttttttt indent </p>
+	<p id="in">with indent:wwwwwwwwwwtttttttttttthhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh indentttttttttttttttttttttttttttttttttttttttttttttt</p>
+	<style>
+		#in{
+			text-indent: 50px;
+		}
+	</style>
+
+<!--Text shadow-->
+	<h2>Text shadow</h2>
+	<ul>
+		<li id="lesh">left shadow</li><br>
+		<li id="rish">right shadow</li><br>
+		<li id="tosh">top shadow</li><br>
+		<li id="bosh">bottom shadow</li><br>
+		<li id="shbl"> shadow blurring</li><br>
+		<li id="shco">shadow color</li><br>
+		<li id="coev">Combine everything</li><br> 
+	</ul>
+
+<!-- 0 - +left and -(right) 0 - -top and + bottom -->
+	<style>
+		#lesh{
+			text-shadow: 2px 0 0 red;
+		}
+		#rish{
+			text-shadow: -15px 0 0 red;
+		}
+		#tosh{
+			text-shadow: 0 -5px 0 red;
+		}	
+		#bosh{
+			text-shadow: 0 5px 0 red;
+		}
+		#shbl{
+			text-shadow: -15px 0 2px red;
+		}
+		#shco{
+			text-shadow: 0 6px 0 blue;
+		}
+		#coev{
+			text-shadow: 6px 6px 6px violet;
+		}
+
+
+
+	</style>
+
+
+</body>
+</html>
+ <!--in old press lead is kept to bring line spacing so leading-->
+

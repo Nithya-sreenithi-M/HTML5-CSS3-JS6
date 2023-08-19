@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>CSS3 Selectors</title>
+</head>
+<body>
+	<!--Selectors-->
+
+<!-- element selectors-->
+	<h3>element selector</h3>
+	<p>Target HTML elements by their tag name. For example, to select all h1, use the selector h1.</p>
+	<style type="text/css">
+		h3{
+			text-transform: capitalize;
+		},
+		h1,h2{
+			text-transform: capitalize;
+		}
+	</style>
+	<p>All h3,h2,h1 starts with capital letter now.</p>
+
+	<h1>Style target elements below</h1>
+	<p><center>***start***</center></p>
+		<div id="play-area" >
+			<div class="class-selector">This is a div</div>
+			<div >Div with no-class-name</div>
+			<div class="class-name-1 ">Div with class name "class-name-1"</div>
+			<div class="class-name-1 class-name-2 class-name-3">Div with class name "class-name-1" "class-name-3" and "class-name-3"</div>
+			<span>This is a span
+					<p>I am direct child p tag of span</p>
+					<b> This is b tag
+						<p>I am p tag nexted inside a b tag and I am grand child of span</p>
+					</b>
+					<p>I am a direct child p tag of span</p>
+
+			</span>
+			<ul>
+				<li class="class-selector">Item 1</li>
+				<li><p>I am inside a p tag.</p></li>
+				<p id="siblings-selector">I am a p tag with id siblings-selector</p>
+				<!--<p> uncomment me when you try adj sibling selector</p>-->
+				<li>Item 1</li>
+				<p>I am p tag inside ul</p>
+				<p>I am p tag inside ul</p>
+			</ul>
+			<ol>
+				<li class="class-selector">Item 1</li>
+				<li>Item 1</li>
+				<li><p>I am inside p tag <b class="red"> I am inside b tag with class name red </b></li>
+				<li class="red"> my class name is red</li>
+			</ol>
+		</div>
+	<p><center>***end***</center></p>
+
+	<h3>id selector</h3>
+	<p>Target a single element with a specific ID attribute. Start with a hash (#) followed by the ID name. For example, to select the element with the ID "header", use #header.</p>
+	<!--
+		<style type="text/css">
+			#play-area{
+				background-color: sandybrown;
+			}
+		</style>
+
+		- targets one div with id="play area" which is not much useful as we select and style multiple elements.
+	-->
+
+	<h3>class selectors</h3>
+	<!--class selectors - same class name containing differnt elements will be affected
+		bus seats - element selector
+		conductor seat - id selector
+		ladies seat - class selector
+
+		- id and class can have same values(.value is class and #value is id)-->
+	-->
+	<p> Target elements with a specific class attribute. Start with a dot (.) followed by the class name. For example, to select elements with the class "button", .button.</p>
+
+	<!--
+		<style type="text/css">
+			.class-selector{
+				background-color: brown;
+			}
+		</style>
+	-->
+
+	<h3>Combined selectors</h3>
+	<p> I am combining ID and class. div.class-selector -  selects div with class "class-selector" gets bg color violet.</p>
+	<p> div.class-name-1.class-name-2 (1 and 2)- selects div with class "class-name-1 class-name-2" gets bg color black. (. is AND) </p>
+	<p>	div.class-name-3, div.class-name-1(1 or 2)- selects div with class-name-3 and Div with class-name-1 both gets yellow. (, is or)</p>
+	<p> Descendant Selectors: ul li - selects all li inside ul. (a b is all b inside a )  </p>
+	<p> ul p - selects all p tags(nexted inside li) irrespective of where it is nexted with ul scope.(all child , grand child, great grand child, etc.,)</p>
+	<p> ol .red - selects all elements inside ol which has class "red".</p>
+	<p> Child selector: span > p - selects direct childs p elements of span (no grand child p, great grand child p, etc.,). 
+		> - selects all direct childs</p>
+	<p>General Sibling Selectors:  #siblings-selector ~ p - selects all p elements that are siblings of an  #siblings-selector id element.Target elements that share the same parent and appear after a specific element( #siblings-selector id element (will not get selected)). </p>
+	<p> Adjacent Sibling Selectors: #siblings-selector + p - selects one direct sibling p that is immediately preceded by a specific element. If no adj p tags, then select none.</p>
+	<p>#siblings-selector + p.classname = selects none because #siblings-selector id element don't have adjacent sibling p with class classname</p>
+
+	<style type="text/css">
+			
+			 #siblings-selector + p{
+			 	background-color: forestgreen;
+			 }
+		</style>
+	<!--
+		<style type="text/css">
+			div.class-selector{
+				background-color: violet;
+			}
+		</style>
+		<style type="text/css">
+			div.class-name-1.class-name-2{
+				background-color: black;
+			}
+		</style>
+		<style type="text/css">
+			div.class-name-3, div.class-name-1{
+				background-color: yellow;
+			}
+		</style>
+		<style type="text/css">
+			ul li{
+				background-color: chocolate;
+			}
+		</style>
+		<style type="text/css">
+			ul p{
+				background-color: tomato;
+			}
+		</style>
+		<style type="text/css">
+			ol .red{
+				background-color: red;
+			}
+		</style>
+		<style type="text/css">
+			span > p{
+				background-color: slategrey;
+			}
+		</style>
+		<style type="text/css">
+			
+			 #siblings-selector ~ p{
+			 	background-color: forestgreen;
+			 }
+		</style>
+	-->
+
+	<h3>Universal Selector: </h3>
+	<p>* targets all elements on the page.</p>
+	<style type="text/css">
+		*{
+			font-family: "arial";
+		}
+	</style>
+
+
+	<h3>Pseudo class (:)</h3>
+	<!-- link should be in different colour, clicked link should be in another color similarly when there are 5 pages and 5 menus the active page menu should be in different color. These changes are done in Pseudo class mostly used in forms-->
+	<!--
+	:link - anchor tag is by default in link state.
+	:visited - when link is clicked and visited
+	:hover - when a cursor is no top of link
+	:active - clicked and not released the click. clicking
+	:focus - when tag key is used and focused on the element -->
+
+	<a href="a"> link </a>
+	<a href="b"> hover </a>
+	<a href="c"> active </a>
+	<a href="d"> visited </a>
+	<a href="#"> focus </a>
+	<form>
+		<input type="text" name="" placeholder="first input child">
+		<input id = "gold" type="text" name="" placeholder="SECOND CHILD id gold"> <!--will not be selected as its second child and we are giving bottom borders to not gold elements-->
+		<input id="sum" type="submit" name="s">
+		<input id = "last" type="text" name="" placeholder="Last CHILD">
+		<!-- id = "last" remove and check once -->
+	</form><br>
+	<input type="text" name="username" required placeholder="required"><br>
+	<input type="text" name="username"placeholder="not required"><br>
+	<input type="checkbox" name="fuc" checked > <label>Checked</label><br>
+	<input type="password" name="pass" disabled><br>
+	<div>
+		<li>I am the only child li inside the div. If there are two child tags inside this divthen i will not be selected</li>
+	</div>
+
+	<style>
+		a:link{
+			color: green;
+		}
+		a:hover{
+			color: red;
+		}
+		a:active{
+			color: yellow;
+		}
+		a:visited{
+			color: white;
+		}
+		a:focus{
+			color: blue;
+		}
+		#sum:hover{
+			color:red;
+		}
+		input:required{
+			background-color: firebrick;
+		}
+		input:checked{
+			margin: 14px;
+		}
+		input:disabled{
+			
+			background-color: cadetblue;
+		}
+		input:first-child{
+			background-color: silver;
+		}
+		input#gold:first-child{
+			background-color: brown;
+		}
+		input#last:last-child{
+			background-color: gold;
+		}
+		input:nth-child(2){
+			background-color: royalblue;
+		}
+		li:only-child{
+			background-color: navy;
+		}
+
+		input:not(.gold){
+			border-bottom: solid;
+		}
+
+	</style>
+	<!--we can also use id or class name instead of element selector everywhere above-->
+	<!--
+		input: nth-child() can take formulas:
+			2n - all even numberly placed child elements
+			3n - selects 3rd, 6th, 9th... child elements
+		input: last-nth-child() counts the formula from last
+		li:last-of-type() - select last li child within all parents
+		span: first-of-type() -selects all last child within all parents.
+
+		<body>
+			<span>selected</span>
+			<span>not selected </span>
+				<div>
+					<span>selected</span>
+				</div>
+		</body>
+
+		span: nth-of-type(), span: nth-last-of-type() similar to nth-child
+		span:only-of-type(), gets all span of type span
+	-->
+
+
+
+
+<!--pseudo elements - to apply styles on 1st line or letter.-->
+	<h3>pseudo elements (::)</h3>
+	<p id="Pseudo">Pseudo eeeeeeeeeeeeeeeeeeeellllllllllllllllleeeeeeeeeeeeeeeeeeeeemmmmmmmmmmmmmeeeeeeeeeeeeeennnnnnnnttttttttttttttttt. asdfasdfasdfasdvasdkcbasidbvaibfawihbdfcajhbcaubcfcuwahbcajshbcausgfayufuhuasdbcawuybefaubvaishivbawuefbaufbvjahsdcbasufbawubf</p>
+	<div class="pseudo-after">content is added from after the div</div><br>
+	<div class="pseudo-before">content is added from before the div</div>
+	<style>
+		h3::first-letter{
+			font-size: 1.3em;
+		}
+		#Pseudo::first-line{
+			color: violet;
+			text-shadow: 6px 6px 6px violet;
+		}
+		.pseudo-after::after{
+			content: 'Helllloooo rum';
+			background-color: olive;
+		}
+		.pseudo-before::before{
+			content: 'Helllloooo wink';
+			background-color: limegreen;
+		}
+	</style>
+
+	<h3>attribute selector</h3>
+	<div>
+		
+		I am div to practise attribute selector.
+
+		<p title="a">I am a p tag with title</p>
+		<p title="aaa">I am a p tag with title</p>
+		<p title="aaaa">I am a p tag with title</p>
+	</div>
+
+	<style type="text/css">
+		
+		[title]{
+			background-color: gray;
+		}
+	</style>
+	<!--
+		[attribute] {
+		  /* Styles applied to elements with the specified attribute */
+		}
+
+		[attribute="value"] {
+		  /* Styles applied to elements with the specified attribute and value */
+		}
+		[href^="https://"] {
+		  color: green;
+		}
+		[src$=".png"] {
+		  border: 1px solid black;
+		}
+		Select elements with a specific attribute value containing:
+		[class*="button"] {
+		  background-color: orange;
+		}
+	-->
+
+	
+
+</body>
+</html>

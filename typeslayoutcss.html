@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+		<title>layout</title>
+</head>
+<body>
+	<p>The are two types of layout. fixed width(width is given in pixel. whatever the screen size the width takes specified pixels) and liquid width( width is given in percentage(90%). whatever the screen size is 90% is taken a width) layout. </p>
+ <!--fixed width - minimize the window and see the differences.
+	<style>
+		body{
+			width: 960px;
+			margin: 0 auto;
+			background-color: black;
+			color: white;
+		}
+	</style>-->
+<!--liquid width
+	<style>
+		body{
+			width: 90%;
+			margin: 0 auto;
+			background-color: black;
+			color: white;
+		}
+	</style>-->
+	<p>In liquid layout when the screen is minimized (when float is used)(floatelements example) the content get collapsed. so a min-width has to be specified. So that when a small size device it wont collapse.</p>
+	<div id="page2">
+	<div id="header2">
+		<h1>demo 2</h1>
+		<p>demo 2</p>
+	</div>
+	<div id="content">
+		<div id="left">
+			<h2>left side bar</h2>
+			
+		</div>
+		<div id="main">
+			<h2>Welcome to 2 nd demo</h2>
+			<p></p>
+		</div>
+		<div id="nav">
+			<h2>navigation menu</h2>
+			<ul>
+				<li><a href="#"> home</a></li>
+				<li><a href="#">about</a></li>
+				<li><a href="#">service</a></li>
+				<li><a href="#">gallery</a></li>
+				<li><a href="#">contact</a></li>
+			</ul>
+		</div>
+
+		<br class="bg">
+	</div>
+
+	<div id="footer2">
+		<p>@contact:</p>
+	</div>
+	<style>
+		#page2{
+			width: 90%;
+			margin: 0 auto;
+			text-align: center;
+			min-width: 500px;
+		}
+		#left{
+			float: left;
+			width: 20%;
+			margin-right: 5px;
+		}
+		#main{
+			float: left;
+			background-color: black;
+			width: 48%;
+			color: white;
+			margin-right: 5px;
+		}
+		#nav{
+			float: right;
+			width: 30%;
+			
+		}
+		.bg{
+			clear: both;
+		}
+		#content{
+			padding: 5px;
+			background-color: skyblue;
+		}
+	</style>
+	
+</body>
+</html>

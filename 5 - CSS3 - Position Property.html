@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Positions </title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="utf-8">
+</head>
+<body>
+<div id="wrapper">
+	<style type="text/css">
+		#wrapper{
+			background-color: lavenderblush;
+			height: 400vh;
+		}
+	</style>
+
+	<h3 id="fixd"> Fixed Position </h3> 	
+	<p id="after-fixd">
+		position: fixed is same as background-attachment: property. It is clipped to the browser and its height and width never affect the element. fixd element is called as sticky header. It works only for 1st heading.
+	</p>
+	<style>
+			#fixd{
+				background-color: cyan;
+				position: fixed;
+				width: 100%;
+				left: 0;
+				top: 0;		
+			}
+			body{
+				padding-top: 20px;
+			}
+
+	</style>
+	<p>z-index: -1; will prioritize which element overlay on other element. Making #fixd z-index:-1 will take it behind the p tag. You will learn further in relative position. </p>
+
+	<p>To look nice, Contents of the body should start below #fixd. Body or wrapper div's padding can be increased. But #fixd heading will also move as it is fixed to the page at default place.  </p>
+
+
+	<h3>Position: Static (default)</h3>
+	
+	<p>
+		Web page render each block level element one after the other in the same order as written in html code in new line. 
+		Inline elements are rendered one by one in same line.
+	</p>
+	<h3 id="Position-1">Heading without margin</h3>
+	<h3 id="Position-2">Moving Heading little left with margin. Heading width is shrinked in viewport to give margin: 15px.</h3>
+	<style type="text/css">
+		#Position-1{
+			background-color: gainsboro;
+		}
+		#Position-2{
+			background-color: gainsboro;
+			margin-left: 15px;
+		}
+	</style>
+
+	<h3 >Relative Position and z index property: </h3>
+	<p>
+		 To move the Heading without affecting the width use postion:relative, left:25px. By default position is position:static; render by order(only one flow) starting left.
+	</p>
+
+	<h3 id="Position-3">P3 - position: relative; left: 25px; top: 25px; no margin</h3>
+	<style type="text/css">
+		#Position-3{
+			background-color: gainsboro;
+			position: relative;
+			left: 25px;
+			top: 25px;
+		}
+	</style>
+	<h3 id="Position-4">P4 - position: relative; left: 25px; top: -35px;</h3>
+	<style type="text/css">
+		#Position-4{
+			background-color: gainsboro;
+			position: relative;
+			left: 25px;
+			top: -35px;
+		}
+	</style>
+	<h3 id="Position-5">P5 - position: relative; left: 50px; top: -65px</h3>
+	<style type="text/css">
+		#Position-5{
+			background-color: gainsboro;
+			position: relative;
+			left: 50px;
+			top: -65px;
+		}
+	</style>
+	
+	<p>
+		All 3 elements are overlapped. z-index tells which element should come down and above another. By default, it follow P3, P4, P5 HTML code order.
+	</p>
+	<h3 id="Position-6">P6 - position: relative; left: 25px; top: 25px; no margin</h3>
+	<style type="text/css">
+		#Position-6{
+			background-color: gainsboro;
+			position: relative;
+			left: 25px;
+			top: 25px;
+			z-index: 2;
+		}
+	</style>
+	<h3 id="Position-7">P7 - position: relative; left: 25px; top: -35px;</h3>
+	<style type="text/css">
+		#Position-7{
+			background-color: gainsboro;
+			position: relative;
+			left: 25px;
+			top: -35px;
+			z-index:0;
+		}
+	</style>
+	<h3 id="Position-8">P8 - position: relative; left: 50px; top: -65px</h3>
+	<style type="text/css">
+		#Position-8{
+			background-color: gainsboro;
+			position: relative;
+			left: 50px;
+			top: -65px;
+			z-index:1;
+		}
+	</style>
+	<h3 id="Position-9">P9 - Element next to P8 which is static position</h3>
+	<style type="text/css">
+		#Position-9{
+			background-color: gainsboro;
+		}
+	</style>
+	<p>
+		Relative position is same as static position(one after other as in HTML code) but it allows to move the element top, right, left, bottom relative to its static position( 50px towards left away from its static position). Other Non relative elements P9 will continuosly rendered in its respective static position.<br> Inspect the element once, position lays outside margin.
+	</p>
+
+	<h3>Absolute elements</h3>
+	<div id="Absolute-example-one">
+		<div class="one">ONE</div>
+		<div class="two">TWO</div>
+		<div class="three">Three</div>
+	</div>
+	<style type="text/css">
+		#Absolute-example-one{
+			background-color: red;
+			padding: 15px;
+		}
+		#Absolute-example-one .one{
+			background-color: cyan;
+		}
+		#Absolute-example-one .two{
+			background-color: lavenderblush;
+		}
+		#Absolute-example-one .three{
+			background-color: limegreen;
+		}
+	</style>
+	<p>
+		One is absolute. Two Three got rendered as if One doesnt exist. One is ignored that is why two gets static position in place of one considering two as 1st div.
+	</p>
+	<div id="Absolute-one">
+		<div class="one">ONE</div>
+		<div class="two">TWO</div>
+		<div class="three">Three</div>
+	</div>
+	<style type="text/css">
+		#Absolute-one{
+			background-color: red;
+			padding: 15px;
+		}
+		#Absolute-one .one{
+			background-color: cyan;
+			position: absolute;
+		}
+		#Absolute-one .two{
+			background-color: lavenderblush;
+		}
+		#Absolute-one .three{
+			background-color: limegreen;
+		}
+	</style>
+	<p>
+		top: 0 will make the one div move to top of page 0. It take position from parent or root.
+		Thus Absoulte positions absoultely inside parent. Since parent has static position, parent can't have any absolute positions as child.
+	</p>
+	<div id="Absolute-one-top-zero">
+		<div class="one">ONE</div>
+		<div class="two">TWO</div>
+		<div class="three">Three</div>
+	</div>
+	<style type="text/css">
+		#Absolute-one-top-zero{
+			background-color: red;
+			padding: 15px;
+		}
+		#Absolute-one-top-zero .one{
+			background-color: cyan;
+			position: absolute;
+			top: 0px;
+		}
+		#Absolute-one-top-zero .two{
+			background-color: lavenderblush;
+		}
+		#Absolute-one-top-zero .three{
+			background-color: limegreen;
+		}
+	</style>
+	<p>To make the parent div able to take a absolute child, lets make parent as relative, absoulte, sticky or fixed.</p>
+	<div id="Absolute-one-top-zero-parent-relative">
+		<div class="one">ONE</div>
+		<div class="two">TWO</div>
+		<div class="three">Three</div>
+	</div>
+	<style type="text/css">
+		#Absolute-one-top-zero-parent-relative{
+			background-color: red;
+			padding: 15px;
+			position: relative;
+		}
+		#Absolute-one-top-zero-parent-relative .one{
+			background-color: cyan;
+			position: absolute;
+			top: 0px;
+		}
+		#Absolute-one-top-zero-parent-relative .two{
+			background-color: lavenderblush;
+		}
+		#Absolute-one-top-zero-parent-relative .three{
+			background-color: limegreen;
+		}
+	</style>
+	<p>If parent div is not non-static position then relative child will take its place at any nearest element in the page that has non-static position. If there are none then it positions at root. </p>
+
+	<h3>Sticky position</h3>
+	<div id="Sticky">
+		<div class="one">ONE</div>
+		<div class="two">TWO</div>
+		<div class="three">Three</div>
+	</div>
+	<style type="text/css">
+		#Sticky{
+			background-color: red;
+			padding: 15px;
+			position: relative;
+		}
+		#Sticky .one{
+			background-color: cyan;
+			position: sticky;
+			bottom: 0;
+		}
+		#Sticky .two{
+			background-color: lavenderblush;
+		}
+		#Sticky .three{
+			background-color: limegreen;
+		}
+	</style>
+	<p>Need to check why it is not working. Scroll page and see have fixed position is passing through the elements to get idea about positions.</p>
+</div>
+</body>
+</html>

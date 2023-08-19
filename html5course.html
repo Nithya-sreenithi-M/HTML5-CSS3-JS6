@@ -1,0 +1,582 @@
+<!-- Avoid using design attributes in HTML, such as height and width, as these should be handled in CSS. -->
+<!-- The slash before "comments" ("/comments") is used to ensure that when searching, only comments are considered. If "comments" alone were used, it might include code content as well. -->
+<!--ctrl+u - to view a source code of an website -->
+
+<!DOCTYPE html>
+<!-- Type "html" and press tab. The entire HTML tag will appear. -->
+<!-- Any elements (tags) that contain the "title" attribute will display the value assigned to "title" when the mouse cursor is moved over the element on the webpage. -->
+
+<html>
+<head>
+	<!-- JavaScript and CSS files are loaded in the <head> section. -->
+	<title>HTML5 Doc</title>
+	<!-- Meta data is used to display text in various languages, like Japanese or Tamil characters, by using specific character sets instead of just displaying them as they are typed. -->
+	<!-- UTF - Unicode Transformation Format - uses 8 bits to encode characters. ASCII, with only 256 symbols, lacks characters beyond English, so UTF is used for broader support. -->
+	<meta charset="utf-8">
+	<!-- Author information and other details about the webpage can be provided using meta tags. -->
+	<meta name="author" content="nithyasreenithi">
+	<!-- The "description" meta tag provides a brief description of the webpage. The "viewport" setting defines how content should be displayed on devices with various screen sizes, including zoom levels. -->
+
+</head>
+
+
+<body>
+
+	<!-- Explanation of the <div> element will be provided after discussing web hosting. -->
+	<div id="header">
+		<H1><CENTER>Heading</CENTER></H1>
+		<p>	Paaaaaaaaaaaaaaarrrrrrrrrrrrrrrrrraaaaaaaaaaaaaaaaaaaaagggggggggggggggggggggggggggggggggrrrrrrrrrrrrrrrrrrrrrrrrrraaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaappppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp
+		hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh </p>
+	</div>
+
+
+	<div id="main">
+
+	<!-- The <p> tag ignores carriage returns within a text paragraph. To create two separate paragraphs, you need two <p> tags or use <br> for line breaks. -->
+	<!-- By default, all <p> and <h> tags start on a new line. -->
+	<!-- The <hr> tag is used to create a horizontal rule. The ending slash <hr/> is optional. -->
+	<hr><hr/>
+
+	<h2>H2 heading 2</h2>
+	<!-- Inline tags, such as <span>, <img>, and <a>, are used to apply formatting or include specific content within a line of text. -->
+	<!-- Block-level elements, like <div>, <h1>, <form>, and others, create distinct blocks on the page, starting on new lines and taking up the full width available. -->
+	<!-- 
+
+		<style type="text/css">
+			h1 {
+				    display: block; 
+				    font-size: 1em;
+				    margin-block-start: 5em;
+				    margin-block-end: 5em;
+				    margin-inline-start: 10px;
+				    margin-inline-end: 10px;
+				    font-weight: bold;
+				}
+			center {
+				    display: block;
+				    text-align: -webkit-center;
+				}
+		</style>
+		Margin > Border > padding
+	-->
+
+
+	
+	<h2 id="begins">H2 Heading</h2>
+	<p>Inline tags - <b>Bold</b>, <strong>Strong</strong>, <u>underline </u>, <em> emphasized </em>, <i>italic</i>, Word <dfn>definition of the word</dfn>, <cite>thirukural - citation </cite>, <q>q tag is to qoute the statement</q></p>
+	<!--emphasis <em> is like italic, citation <cite> tag and Definition <dfn> tag work like this: <cite> is used for syntactically citing an entire book, similar to quoting something like the Thirukural, while the <dfn> tag is used for providing definitions for words-->
+	<blockquote>
+		<p> This is a block present inside block qoute tag used to qoute paragraph.</p>
+	</blockquote>
+	<p><abbr title="doctor"> Dr.</abbr> Sathya kumari, <acronym title="Indian Institute of space reasearch">ISRO</acronym></p>
+	<!--abbr tag specifies abbrivation on mouse hover. Acronym works the same-->
+	<address>
+		<p>
+			Address tag - 19/c <br>
+			inside paragharaph -anna nager<br>
+			used line breaks -coimbatore
+		</p>
+	</address>
+	<!--tags are used to represent deleted, inserted, and struck-through text, respectively, for indicating edited content.-->
+	<p>Edited content - <del> deleted </del> <ins> inserted </ins> <s>stricked</s></p>
+
+
+	<h3>H3 heading</h3>
+	<!--<ol> - ordered list(steps to do potatoes fries),
+		<ul> - unordered list(ingredients),
+		<dl> - definition list(dictionaries),
+		<dt>- definition term, 
+		<dd>- definition description, 
+		<li> - list items,
+		bullets and numbers can be changed using styles css-->
+	
+	<!--<a> anchor tag -to bring a link in a website--><!-- # in href or src means same page url -->
+	<ol>
+		<li><a href="#">facebook</a></li>
+		<li><a href="www.facebook.com">facebook</a></li>
+		<li><a href="www.facebook.com">facebook</a></li>
+		<li><a href="www.facebook.com">facebook</a></li>
+	</ol>
+	<ul>
+		<li><a href="www.facebook.com">facebook</a></li>
+		<li><a href="www.facebook.com">facebook</a></li>
+		<li><a href="www.facebook.com">facebook</a></li>
+		<li><a href="www.facebook.com">facebook</a></li>
+	</ul>
+	<dl>
+		
+		<dt>Html</dt><dd>Hyper text markup language</dd>
+		<dt>Css</dt><dd>cascading style sheet</dd>
+		<dt>Js</dt><dd>Javascript</dd>
+		<dt>Node.js</dt><dd>frame work</dd>
+	</dl>
+
+	<!-- nested list is used in menu and submenu-->
+	<ul>
+		<li><a href="#">Home</a></li>  
+		<li>
+			<a href="#">nested</a>
+			<ul>
+				<li> " list one"</li>
+				<li> " list two"</li>
+				<li> " list three"</li>
+			</ul>
+		</li>  
+		<li><a href="#">Home</a></li>  
+	</ul>
+
+
+	<h4>h4 heading</h4>
+	<!-- <table>, <thead> - for lables, <tr> -for rowwise filling, <th>- to include table lables, <tbody> - where table enteries are done, <tr>- rowise filling, <td> - to enter data-->
+	<!-- The headings will stay in a position, only the data are scrolled up when thead and tbody tags are used. THe scrollers are done in css and js.In html the headings should be in heading <thead>, <tfoot> contains data and footer informations -->
+
+	<!-- Below styling knowlege will helps us during old website restoration-->
+	<!-- cellpadding - will pad the text from border -->
+	<!-- width - to resize table in percentage to website eg. 85% of total width -->
+	<!-- cellspacing - to bring space inbetween cells-->
+	<!-- bgcolor - to give bg color to <cell row -->
+	<!-- these style has to be done in presentation layer-->
+
+	<table border="4" cellpadding="3" width="85%" cellspacing=" 5"> 
+		<thead>
+			<tr>
+				<th>name</th>
+				<th>age</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>eesa</td>
+				<td>20</td>
+			</tr>
+			<tr>
+				<td>eesa</td>
+				<td>20</td>
+			</tr>
+			<tr>
+				<td>eesa</td>
+				<td>20</td>
+			</tr>
+		</tbody>
+		<tfoot>
+			<tr>
+				<td>Total age</td>
+				<td>60</td>
+			</tr>
+		</tfoot>
+	</table> 
+
+	<br>
+	
+	<table border="3">
+		<tr>
+			<td></td>
+			<th>"1"</th>
+			<th>"2"</th>
+			<th>"3"</th>
+			<th>"4"</th>
+			<th>"5"</th>
+			<th>"6"</th>
+			<th>"7"</th>
+			<th>"8"</th>
+		</tr>
+		<tr>
+			<th>"M"</th>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+
+		</tr>
+		<tr>
+			<td>"T"</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>"W"</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+
+			<td>"T"</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+
+			<td>"F"</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+	</table>
+	
+	<br>
+
+	<!--row and col span-->
+	<table border="3">
+		<tr>
+			<th rowspan="2">day</th>
+			<th colspan="11">periods</th>
+	<!-- this row head should cover the entire 8 cell + recess and lunch 3 cells so 11 -->
+		</tr>
+		<tr>
+			<td></td>
+			<th>"1"</th>
+			<th>"2"</th>
+	<!-- this column should cover the entire colume-->
+			<th rowspan="6">Recess</th>
+			<th>"3"</th>
+			<th>"4"</th>
+			<th rowspan="6">lunch</th>
+			<th>"5"</th>
+			<th>"6"</th>
+			<th rowspan="6">Recess</th>
+			<th>"7"</th>
+			<th>"8"</th>
+		</tr>
+		<tr>
+			<th>"M"</th>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<th>"T"</th>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<th>"W"</th>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+
+			<th>"T"</th>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+
+			<th>"F"</th>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+	</table>
+
+
+	<h5>H5 heading </h5>
+	<form  action="next.php" method="POST" enctype="multiparts/form-data">
+		<!-- action - when a submit button is clicked, the entered data is sent to the backend (often developed in PHP) for processing. -->
+		<!-- The enctype="multipart/form-data" attribute in a form tag is used when you have file inputs (e.g., for uploading images) within the form. It specifies how the form data should be encoded and transferred to the server, allowing files to be included as part of the data.-->
+
+		<!--  the <fieldset> element in a form is used to group related form fields together that belong to a specific category or section.
+			Example - employee, student, and intern details, you can use three separate <fieldset>-->
+		<fieldset>
+			<!--<legend> is used within a <fieldset> element to provide a caption of particular fieldset-->	
+			<legend>emp user name</legend>
+			<label>login</label><br>
+			<label>username or email</label><br>
+		</fieldset>
+
+		<!-- to get input from user <input> is used. type = type of input. name = variable name in which the value has to be stored -->
+		<!-- size attribute - affects text box size to n characters. Input can be more than n characters but the width of box will become same that only 0-4 character is displayed-->
+		<!-- maxlength - allows only limited characters. eg. user name cannot exceed 5 characters-->
+		<fieldset>
+			<legend> maxleng size placeholders values </legend>
+			<label>username</label> <input type="text" name="username" size="4" maxlength="5"><br>
+		<!--  placeholder attribute displays temporary text in an input field that vanishes when users begin typing-->
+			<label>password</label> <input type="password" name="password" placeholder="password"><br>
+		<!-- The default display text for a submit button is usually "Submit" or "Submit Query". To modify the display text use VALUE-->
+		<!-- value attribute- to set default value. Ex in students form by default marital status should be single. -->	
+	
+	<!--HTML 5-->
+		<!-- AGE is represented in an input type text field, and users can enter negative values.To get date of birth developer has to 	
+			any lines for drop down list. 
+			Html 5 came with solution, 	email type and number type date type url type and required - will not allow to submit the form without fililing the flied-->	
+			<label>Email</label> <input type="email" name="email" value="admin" required><br>
+		<!-- min- ,max- value should be between 18 and 99-->
+			<label>age</label> <input type="number" name="age" min="18" max="99"><br>
+			<label>dob</label> <input type="date" name="dob"><br>
+		<!-- range, slider min- minimum value max - maximum value step - increment when a slider is moved-->
+			<label>price range</label> <input type="range" name="price" min="20" max="2000" step="4"><br>
+		<!-- http//: is needed for url-->
+			<label>ur linked in url</label> <input type="url" name="linkedin"> <br>
+		<!-- time-->
+			<label>time</label> <input type="time" name="time"><br>
+		<!-- week - when vacation week input-->
+			<label>vaction week</label> <input type="week" name="vw"> <br>
+		<!-- search gives x button to clear typed data. Used to create search bars-->
+		<!-- The for attribute in the <label> tag should match the id attribute of the corresponding <input> element to provide better accessibility and user experience.-->
+			<label  for="searchInput">search</label> <input id="searchInput" type="search" name="s">
+		<!-- HTML5 features are not supported across all browers. In such case browsers convert these html5 attributes into text attribute--><!--  To overcome JavaScript polyfills can be used-->
+		</fieldset>
+		
+		<!-- Drop Downs - use selected attr for default value-->
+			<label>gender</label>
+			<select name="gen"><br>
+				<option value="male" > male</option>
+				<option value="female" selected > female</option>
+			</select>
+		
+		<!-- to select multple values from dropdown use multiple attr(optional)
+			use normal click , ctrl + click, shift + click to select-->
+			<select name="games[]" multiple="multiple" size="2">
+			<option value="volley"> volleyball</option>
+			<option value="foot">football</option>
+			<option value="cycling"> cycling</option>
+			</select>
+
+	<!-- col is used to as size attribute in text area. displays 25 character in each line, rows attribute - how many lines -->
+		<label>comment</label>
+		<textarea name="comment" cols="25 " rows="4">
+			Default values are give here, remove before typing.
+		</textarea> <br>
+		<textarea name="c" placeholder="type here"></textarea>
+	
+	<!-- radio type input--><br>
+	<!-- both the radio buttons can be left unchecked by user. Give default check using checked or checked ="checked" -->
+	<!-- s and m are values(are must) assingned to maritals-->
+
+		<label>single</label><input type="radio" name="maritals" value="s" checked > 
+		<label>mingle</label><input type="radio" name="maritals" value="m"> <br><br>
+
+	<!-- blind people use screen readers to read html pages if lable tags not used then this cannt be achieved-->
+	<!-- input element and label has to be linked telling that its not a indivulual lable it is lable for input element using "for" =id -->
+	<!-- One need to click on the ring to select the option. After adding for and id clicking the text gets selected-->
+	<!-- when for is used to lable whenever it is clicked the focus goes to the element eg when lable is linked with the input element when label is clicked the  pointer will blink in the input-->
+		<input type="radio" name="marital" value="s" checked id="s"> <label for="s">single</label> 
+		<input type="radio" name="marital" value="m" id="m"> <label for="m">mingle</label> <br>
+		<label for="em">click her to see how lable with 'for' attr works</label>
+		<input type="email" name="email" value="@gmail.com" id="em"><br>
+	
+	<!-- check box name =food[] array because more than one value can be checked. If array is not used only last checked value will be sent. checked attr to denote defaults -->
+		<input type="Checkbox" name="food[]" value="burger " checked> <label> burger</label>
+		<input type="Checkbox" name="food[]" value="cburger "> <label> chicken burger</label>
+		<input type="Checkbox" name="food[]" value="pcburger "> <label>pepper chicken burger</label>
+		<br>
+
+	<!-- to upload a file, type = file attr,  enctype="multiparts/form-data"-  will convert and sent the file in binary form orelse only text will be transmited without file-->
+		<input type="file" name="resume">
+
+	<!-- when submit is  clicked, the query string is generated using input values and appended to url. eg: "file:///C:/Users/DELL/Desktop/web%20develoopement/index.html?username=qwert&password=112234&username=admin%40j.com&gen=male&submit=submit"-->
+	<!--2 methods to sent data to server, above url is created because form uses GET method by default(vulnerable as data is visible) ( used when url has to shared. eg. google search result url contains search words in it. when the url is shared search results page opens). to over come this use method = POST(while senting data from FE to BE).-->
+		<input type="submit" name="submit" value="submit"><br>
+	</form>
+
+	<h6>H6 heading</h6>
+	<p>(a+b)<sup>2 superscript</sup> H<sub>2 subscript</sub>O </p>
+	<!--subscript and superscript tags-->
+
+	<h1>H1 heading</h1>
+	<!-- to make a image open in new tab target variable should be used(same tab default) when the image is clicked. blank is nothing but new-->
+	<a href="images/img.png" target="blank"><img src="images/img.png" alt="print screen picture" width="200" title="title is displayed when curser touches the elements"></a><br><br>
+	<!--
+		img tag- width and height caan be specified, if only height is given width is asssigned with given height value and viceversa
+		alt- will show the text when the image is not loaded-->
+	
+	<!-- If u need a caption under a image like fig:1 then align tags and other formatting tags should be used and in html 5 figure and figurecaption tags can be used-->
+	<figure>
+		<img src="images/img.png" alt="print screen picture" width="200" title="title is displayed when curser touches the elements">
+		<figcaption>fig:1.2</figcaption>
+	</figure>
+
+	<h2>H2 Heading</h2>
+	<pre>
+	function jsexample(str)
+		{
+			alert(str)
+		}
+	</pre>
+	<!-- pre tag - makes the block appears exactly on the webpage-->
+	<p>
+	function jsex2(str)
+	{
+		alert(str)
+	}</p>
+	<!--without pre--> <br>
+
+
+	<h3>H3 heading</h3>
+	<a href="www.facebook.com">facebook</a>
+	<br>
+	<!-- to inform the site that it is an address-->
+	<!-- to include a email id as a url will open in browser a email has to open in mail some changes are made. mailto: is like http: it will auto fill the mail id in mail app. it works only to desktop clients -->
+	<a href="mailto:nithyasreenithim@gmail.com">Contactus</a><br>
+	<!-- in pdf when a topic in table of content is clicked its redirected to its topic this is called named anchors. It is used to nav within a page like below example. heading tag is set with an id and it is refered here-->
+	<a href="#begins"> back to top </a>
+
+	<h4>h4 heading</h4>
+	<!-- absolute (address) and relative paths(entier route to reach the destination)
+	In depart/cs/img/img.png means im i college folder a parent of depart so to access a img in img folder have to mention a path like this  
+	Im in cs folder now so if i want to access a img in college folder "../../img.png"
+	moves to depart folder and college folder and from college folder a img is accessed .
+	a file is accessed from a grandchild folder to a grandparent folder in reverse -->
+	
+
+	<h5>H5 heading</h5>
+	<!-- since this website is launced in local host and if the website has to be viewed by every one ,IP address of local host can be given to everyone and the folder can be made public but not many folders .Consider amazon have 1000 products and each product have a webpage so developer had to code a 1000 webpages manually and updating them instead a database of product details and a programming language(_php) that will sent the data to website this can be done in server-->
+	<!-- to launch a website a server is needed , a server will have a 
+		L/W-linux windows os
+		P-back end programming language php
+		M-database mysql mangodb
+		A-server apache software
+		all together LAMP - WAMP STACK can be downloaded from appachefriends.org xampp-->
+	<!-- so open the xampp server > go to browser and type local host. programfiles/xampp/htdoc is the response folder so if index page is stored in the location localhost/index.html in browser will open the page but to make the page available for the user all time server must always be on and a good bandwidth is needed to be responsive quickly, so we rent a server and this is called hosting-->
+	
+	<!-- web hosting providers - a server can be rent and if a website only needs 500mb the remaining memory can be used to host some other websites this is called shared webhost.
+	every server will have one ip address and many websites can be hosted in one server so domain names are used DNS server will help to get ip address for domains and when the server gets request it will respond accordingly-->
+
+
+	<h6>H6 heading</h6>
+	<!-- block level elements and inline elements-->
+	<!-- elements that starts in new line are called block level elements. Ex <p> tag h1 tag. both take full width. -->
+	<p>Even though space is there p starts in new line because h take entire line. block line elements takes full width.  </p>
+	<!--but inline element takes only space they needed-->
+	<p>but inline element takes only space they <i>needed</i> like italics does</p>
+	<style>
+		  i{
+		  			border: 1px solid red;
+		  			}
+	</style>
+	</div>
+
+
+	<!-- imp when Css is used-->
+	<!-- span- inline tags are grouped using span. div- block level elements are grouped in div-->
+	<div id="divexample">
+		
+		<p> BLLLLLLLLLLLLLLLLLllOOOOOOOOOOOOOOOCCCCCCCCCCCCCCCCCCCCCKKKKKKKKKKK level ELEeeeeeeeeeeeeeeeeeeement</p>
+	</div>
+	<!-- frame - is used to split a webpage into division as we did in 11th std-->
+	<!-- iframe - if i need to include a youtube video that has to play in my website from youtubes server , we can use iframe . Embedding websites simply-->
+	<!-- video on youtube > share > embed > copy link > paste in iframe s  src attr-->
+	<!-- allow- allows features , allowfullscreen- allows full screen option-->
+	<!-- # in herf or src means same page url -->
+	<iframe src="#" height="315" width="500"></iframe>
+	<img src="images/iframepng.png" width="800">
+	<!-- google map embed. search a place in google map > share> embed map> url copy paste-->
+
+	<!-- html entities-->
+	<!-- <b - is taken as bold no ending so omitted to over come this html entities-->
+	<p>the expression is a<b ===? </p>
+	<!--&lt -less then entity. every special characters has a entitycode . dev.w3.org - to get more entity codes. all code starts with &, to follow standard and safety use entity code for special characters. there is entity code for & too-->
+	<p>the expression is a&ltb ===?</p>
+
+
+	<!-- audio files play - before html 5 " adobe flash " is used to play audio in websites
+		controls - audio control buttons-->
+	<audio src="JAILER.mp3" controls>
+		displayed when audio mp3 wav etc formats are not supported in browser.
+	</audio>  <br>
+	<!--wav is not supported in explorer. To fix this multiple formats has to be given.
+		there will be many formats so scr is not included
+		anyone supported format will be displayed-->
+	<audio controls>
+		<source src="JAILER.mp3" type="audio/mp3">
+		<source src="pi.wav" type="audio/wav">
+	</audio>
+	<!-- video - same as audio but width is needed height addjusted  accordingly based on to given height and original video ratio-->
+	<video src="aa.avi" width="500"> video not supported</video>
+	<video controls width="400" >
+		<source src="Make you mine by public.mp4" type="video/mp4">
+		<source src="aa.avi" type="video/avi">
+		
+	</video>
+	<!-- when 1gb video audeio is used in 4 different types then server should have great speed so maximum use embed method-->
+
+	<!--<p><header>, <nav>, <main>, <article>, <section>, <aside>, and <footer></p>-->
+	<h2>header, nav, main, article, section, aside, footer</h2>
+		<p>Helps for better SEO and automations</p>
+		<div>
+			<header></header>
+			<nav></nav>
+			<main>
+				<aside>For side section with contents link</aside>
+				<section></section>
+				<section></section>
+				<article>Some stuff that is not only related to the website. Eg: ads </article>
+			</main>
+			<footer></footer>
+		</div>
+	<div id="footer">
+		<ul>
+			<li>
+				<a href="https://stripe.com/en-in?utm_campaign=IN_EN_Search_Brand_Stripe_EXA-19968032780">best samples to go through</a>
+			</li>
+		</ul>
+	</div>
+</body>
+</html>
+<!---->
+<!-- Try copy paste the html code from inspect elements and see you can use it.-->
+<!-- In developer.morzilla.org u can find where the iframe html5 attr which broswer supports and also all brower compatibilies..,-->
+<!-- to seent data from A server to B. so that server B can update the data in its website - XML is used-->
+<!-- xml uses strict syntax like opened tag should be closed . SO it is also inspired to make html strict.. because before  html 1.0 it is ok to leave <p> unclosed--> 
+<!-- <!DOCTYPE html PUBLIC -html 4
+	<!DOCTYPE html>- html 5
+	<?xml version=2.0 xml?> -xml -->

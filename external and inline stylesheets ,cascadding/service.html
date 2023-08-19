@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+		<title>service</title>
+		<link rel="stylesheet" type="text/css" href="styles.css">
+
+</head>
+<body>
+	<div id="page2" style="background-color: brown;">
+	<div id="header2">
+		<h1>Cascading style sheet</h1>
+	</div>
+	<div id="content">
+		<div id="left">
+			<h2>Technically:</h2>
+			<p>first external style is applied, it is overrided by embedded styles, it is finally overrided by inline style. </p>
+			
+		</div>
+		<div id="main">
+			<h2>service</h2>
+		<div class ="service">
+			<h2>embedded css</h2>
+			<p>style tags are used.not scalable.second highest priority. main black is ignored embedded grey is applied.</p>
+		</div>
+		<div class ="service">
+			<h2>inline css</h2>
+			<p>inside the tag style="" to style attribute values and property are given. not adviced. have highest priority. page2 inline brown is worked not embedded blue.</p>
+		</div>
+		<div class ="service">
+			<h2>external css</h2>
+			<p>style is written in separete css file using tag id and class and included in html using link. it is scalable</p>
+		</div>
+		</div>
+		<div id="nav">
+			<h2>navigation menu</h2>
+			<ul>
+				<li><a href="home.html"> home</a></li>
+				<li><a href="about.html">about</a></li>
+				<li><a href="service.html">service</a></li>
+				<li><a href="gallery.html">gallery</a></li>
+				<li><a href="contact.html">contact</a></li>
+			</ul>
+		</div>
+
+		<br class="bg">
+	</div>
+
+	<div id="footer2">
+		<p>@contact:</p>
+	</div>
+</div>
+<style>
+	#page2{
+		background-color: blue;
+	}
+	#main{
+		background-color: grey;
+	}
+</style>
+</body>
+</html>

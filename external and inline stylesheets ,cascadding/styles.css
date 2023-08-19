@@ -1,0 +1,51 @@
+#page2{
+			width: 90%;
+			margin: 0 auto;
+			text-align: center;
+			min-width: 500px;
+}
+#left{
+			float: left;
+			width: 25%;
+			margin-right: 5px;
+}
+#main{
+			float: left;
+			background-color: black;
+			width: 48%;
+			color: white;
+			margin-right: 5px;
+			text-align:center;
+}
+#nav{
+			float: left;
+			width: 25%;
+			
+}
+.bg{
+			clear: both;
+}
+#content{
+			padding: 5px;
+			background-color: skyblue;
+}
+#header2{
+			text-align: center;
+			background-color: skyblue;
+			color: white;
+}
+#footer2{
+			background-color: skyblue;
+}
+.service{
+			border:1px solid cyan;
+			width: 25%;
+			float: left;
+			margin-left:  4.3%; 
+			margin-right: 3%;
+			text-align: center;
+		}
+ul{
+	list-style-type: none;
+}
+		

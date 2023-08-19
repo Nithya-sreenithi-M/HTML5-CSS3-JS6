@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>cssselectors</title>
+</head>
+<body>
+	<h1>Css selectors</h1>
+	<dl>
+		<dt>Universal selector (* - affects all elements):</dt><br>
+		<dd>By default, elements have margin which is overrided when margin is specified. this affects the layout.So clear the default margin(of all elements) should be get ridden using universal selectors and when style is specified (user-defined) it will be applied.<br><br> body is given margin:0 auto; in universal selector removed all default margin other the (user-defined) specified onces(body margin and padding).<br><br>List padding and margin is also cleared. </dd>
+	</dl>
+	<h2>Ajuscent sibling selector:(+)</h2> 
+		<p>If paragraph followed by a h2 dont need a margin then siblings selector is used. h2 + p selector - used to removes margin of p marked up next to a h2.</p>
+		<p>this paragraph has margin but paragraph next to h2 has 0 margin.</p>
+	<h2>General sibilng selectors:(~)</h2>
+		<p>If all paragraphs next to h2 has to be targeted , general sibling selector is used.<br> h2 ~ p selector - used to give italic to all paragraghs followed by h2.</p>
+	<ul>
+		<li><a href="#">a</a></li>
+		<li><a href="#">b</a></li>
+		<li><a href="#">c</a></li>
+	</ul>
+	<h2>descendent selector:( )</h2>
+		<p>If a element selector is used to remove the underline in link. Underline is removed link present all over the page<a href="#">link in content</a>. If only link in li should lose the underline then descendent sibling selector is used. <br>li a - when li has a as descendent then a link's underline is removed.<br>descendent selector: affects not only children but also grand children , great grand children,..</p>
+	<h2>children selectors:(>)</h2>
+		<p>If only imidient child needs to be affected then child selectors is used.<br>
+		#nav > li > a- nav is outer ul, > li affects only direct child (li) of ul, >li >a will affects direct child(a) of li</p>
+		<ul id="nav">
+			<li><a href="#">direct child a</a></li>
+			<li><a href="#">direct child b</a></li>
+			<li><a href="#">direct child c</a></li>
+			<ul>
+				<li><a href="#">grand child a</a></li>
+				<li><a href="#">grand child b</a></li>
+				<li><a href="#">grand child c</a></li>
+			</ul>
+		</ul>
+	<h2>Attribute selector:([attribute])</h2>
+		<p>If all title type elements like <acronym title="acronym">acro</acronym>, <abbr title="abbrivation">abbr</abbr> need to be in different colors then title selector (attribute of acronyma and abbr) should be used.<a href="#">internal link</a> <a href="https:\\www.facebook.com">external link</a> <a href="#">internal link</a> <a href="http:\\www.facebook.com" target="blank">blank</a> <a href="#">internal link</a> <a href="https:\\www.google.com">substring</a>. To change the colour of external link a[href^="http"] - href in a tag which have value starting with https is affected. ^ denotes starting position.a[targer="_blank"] - _ means strictly blank not blanksss blankraf only blank. a[href*="google"] - * checks matching substring.<a href="google">substring</a> a[href~="google"] - href containing only word google is affected. A download link is given .pdf need a pdf icon and .doc need a doc icon to indicate the file type. a[href$=".pdf"]  a[href$=".doc"] are used to select links containing extensions .pdf and .doc and bg img can be given. </p>
+<style>
+	body{
+		width: 90%;
+		margin: 0 auto;
+		border:5px solid cyan;
+		padding: 10px;
+		background-color: black;
+		color:cyan;
+	}
+	h1{
+		text-align: center;
+		font-family: sans-serif;
+	}
+/*	*{
+		margin: 0;
+		padding: 0;
+	}*/
+/*	h2+p{
+		margin:0;
+	}
+	h2 ~ p {
+		font-style: italic;
+	}
+/*	a{
+		text-decoration: none;
+	}*/
+/*	li a {
+		text-decoration: none;
+	}
+	#nav > li > a{
+		font-style: italic;
+		color: skyblue;
+	}
+	[title]{
+		color: lightgreen;
+	}
+	a[href^="https"]{
+		color: lightgreen;
+	}
+	a[target="blank"]{
+		color: khaki;
+	}
+	a[href*="google"]{
+		color: darkgreen;
+	}
+	a[href~="google"]{
+		color: navy;
+	}*/
+</style>
+	<h2>Pseudo class and elements :</h2>
+		<p> refer available pesudo class and elements developer.mozilla.org</p>
+	<h1>Css specificity</h1>
+	<p>if a is given brown, all a in body gets brown. li a is given blue, a which has li parent will get blue and other a will be in brown. ul a is given green all a in ul become green li is overwritten as it is after li a. if ul a is before li a green will be overwritten by blue. This is css specificity. </p>
+<style>
+	a{
+		color: brown;
+	}
+/*	li a {
+		color: blue;
+	}
+	ul a{
+		color: green;
+	}*/
+/*	ul a{
+		color: green;
+	}
+	li a {
+		color: blue;
+	}*/
+</style>
+<div id="wr">
+	<div id="box1">
+		<p>style attribute 1000's<br>Most specific </p>
+	</div>
+	<div id="box2">
+		<p>ID 100's</p>
+	</div>
+	<div id="box3">
+		<p>class, Pseudo class, attribute 10's</p>
+	</div>
+	<div id="box4">
+		<p>element 1's<br> least specific</p>
+	</div>
+<br id="clear">
+</div>
+<style>
+	#wr{
+		width: 90%;
+		margin: 0 auto;
+		color: black;
+	}
+	#box1{
+		width: 25%;
+		height: 100px;
+		background-color: red;
+		float: left;
+		text-align: center;
+	}
+	#box2{
+		width: 25%;
+		height: 100px;
+		background-color: khaki;
+		float: left;
+		text-align: center;
+	}
+	#box3{
+		width: 25%;
+		height: 100px;
+		background-color: orange;
+		float: left;
+		text-align: center;
+	}
+	#box4{
+		width: 25%;
+		height: 100px;
+		background-color: yellow;
+		float: left;
+		text-align: center;
+	}
+	#clear{
+		clear: left;
+	}
+</style>
+<p> In specificity, a =1, ul a =2, li a =2 (all are element selectors) so ul a and li a  have more specificty and one overrides another. If id is used then #nav a this will be applied because 1 0 1 (hundrends 1o's 1's) but li a is 002 li a =2, when ul li a is given 003 which is smaller than 1 0 1.</p>
+<p>flaton.webulose.com - have different ul style in it shows how important is css specificity.</p>
+<style>
+	a{
+		color: brown;
+	}
+	#nav a{
+		color: green;
+	}
+	li a {
+		color: navy;
+	}
+	ul li a {
+		color: purple;
+	}
+</style>
+</body>
+</html>

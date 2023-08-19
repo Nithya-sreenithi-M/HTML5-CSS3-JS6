@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>csslayout</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="utf-8">
+</head>
+<body>
+	<div id="container">
+	<h3>Box property</h3>
+	<p>
+		Every HTML element is in a Box. Inspect -> Layout -> Box and select the Heading to see the block or box.<br>
+		Heading is a Block level element and it takes complete width. Height is until content/text.<br>
+		<span>SPAN</span> is a Inline element, does not takes complete width on both width and height.<br>
+		Margin -> Border -> Padding -> content.
+	</p>
+
+	<h3>Width property</h3>
+	<p>
+		The body tag takes entire width of the page. Heading is taking complete width of its parent(Body).<br>
+		If body's width is fixed to some size then the block level elements will take the container's width(body's width).<br>
+		Use percentage as unit for value in width(best and easy practice when using div tag).
+	</p>
+		<!--
+			Remove the container id from container div to see the style
+
+			<style>
+				body{
+					width: 90%;
+					background-color: lavenderblush;
+				}
+				h3{
+					background-color: white;
+				}
+
+			</style>
+		-->
+
+	<h3>Checking if body width is 90% </h3>
+	<div id="wi"> 
+		<p>
+			Contents are in 90% width but background-color is applied to 100%.<br>
+			To overcome the issue, all elements should be inside a single wrapper or container div.<br>
+			The current div takes 90% of body's width and has background-color only to div's width.
+		</p>
+	</div>
+
+	<style>
+		#wi{
+			width: 87%;
+			background-color: white;
+		}
+	</style>
+
+	<h3>Wrapping the page in a container div - To make entire page in width fixed.</h3>
+
+		<style type="text/css">
+			#container{
+				background-color: lavenderblush;
+				width: 90%;
+			}
+		</style>
+	
+	<h3>min-width</h3>
+	<p>
+		When the browser is adjusted, the content also adjusts to fit within it. To prevent further wrapping, you can set a minimum width. Beyond this minimum width value, the content will no longer wrap based on the browser's width. This approach is often used when there is an image on the webpage that shouldn't be resized according to the browser window. By allowing the content to wrap to the window size until it reaches the image size, and then stopping wrapping, a desired layout can be achieved.
+	</p>
+
+	 <style>
+		#container{
+			min-width:711px; 
+		}
+	</style>
+
+	<h3>max-width</h3>
+	<p>
+		Contents gets maximized when viewed in wide screen desktops, smart TV like wrapping occures in small screen.
+		max-width give limit when maximizing should stop as lengthy line in p across the screen reduces the readablity. 
+	</p>
+	<!--
+
+		Now container will take width: 90% of 900px. Desktop screen is wider than 900px. So maximizing will stop after 900px when browser gets adjusted. Consider desktop as 4K TV, 900px developers device as PC.
+
+
+			<style>
+				#container{
+					max-width: 900px;
+				}
+			</style>
+	-->
+		
+
+
+	<h3>Height and width of element <a href="https://www.youtube.com/watch?v=rIO5326FgPE&t=61s">link</a></h3> 
+	<img src="images/Boxmodel - 1.png" width="900">
+	<p>
+		Content width =532.7 and height = 18.3. Let's make them 100 X 100 px to box-2. Contents will take 100px X 100px, padding surronds the content with 20px, border covers the padding with 10px, margin covers the border by 60px. so box appears sqaure.<br>
+		Adding same properties to box-3. Box-2 has margin 60px at bottom and Box-3 has 60px at the top which collides with each other.<br>
+		We use margin to separate two elements. Space between Box-2 and Box-3 is NOT Box-2 bottom margin + Box-3 top margin (60+60 =120). Space is between Box-2 and Box-3 is 60px ONLY.<br>
+		<b>Lets add properties to box-1 with bottom margin 100px. Box-2 has 60px and Box -1 has 100px margin. Space between Box-2 and Box-3 is 100px. If Margin of box-1 is 0px and box-2 is 60px then space between them will be 60px.</b>.
+	</p>
+	<p>
+		Hover over Box-2, it shows 158.3 X 158.3 as width X height but the width and height specified is 100 X 100px.<br>
+		Total Height = Content Width + 2 * Border + 2 * Padding (bottom and top) = 160px (slight variations based on the browser and its rendering engine.)<br>
+		To make whole element within 100px, use box-sizing: border-box; It includes Border and Padding withing the width and height.<br>
+		<b>Margin is never included in both scenarios.</b><br>
+		Box-4 has box-sizing property.
+	</p>
+	<p>
+		Conclusion: Height and width is contents height and width. To make them elements height and width use box-sizing: border-box;
+		<br> Margin helps to bring space between elements.
+		<br> Padding gives space withing content and border.
+		<br> Use box-sizing universally *{} to apply it to all childs that use width and heigth so you don't want to calculate Content Width + 2 * Border + 2 * Padding everytime.
+	</p>
+		<div class="box-element-one">
+			I'm a box one.
+		</div>
+		<div class="box-element-two">
+			I'm a box two.
+		</div>
+		<div class="box-element-three">
+			I'm a box three.
+		</div>
+		<div class="box-element-four">
+			I'm a box four.
+		</div>
+	<h3>Box sizing universally:</h3>
+		<p>All 4 boxes will be box-sized.</p>
+	<!--
+		<style type="text/css">
+			*{
+				box-sizing: border-box;
+			}
+		</style>
+	-->
+
+	<!-- border: 2px 2px 2px 2 px is top right bottom left
+		 border: 2px 2px is top and bottom left and right-->
+	<style >
+		.box-element-one{
+			background-color: skyblue;
+			width: 100px;
+			height: 100px;
+			padding: 20px;
+			border: 10px solid black;
+			margin: 100px;
+		}
+		.box-element-two{
+			background-color: blueviolet;
+			margin: 60px ;
+			border: 10px solid black;
+			padding: 20px;
+			width: 100px;
+			height: 100px;
+
+		}
+		.box-element-three{
+			background-color: cadetblue;
+			margin: 60px ;
+			border: 10px solid black;
+			padding: 20px;
+			width: 100px;
+			height: 100px;
+		}
+		.box-element-four{
+			background-color: cadetblue;
+			margin: 0px ;
+			border: 10px solid black;
+			padding: 20px;
+			width: 100px;
+			height: 100px;
+			box-sizing: border-box;
+		}
+		.box-size{
+			box-sizing: border-box;
+		}
+
+	</style>
+
+	<h3>Height, Min-Height, max-height, overflow : </h3>
+	<p>
+		 The default height is auto(width is auto), which means the element's height is determined by its content. When height specified is less than content height then content overflows outside the element.
+	</p>
+	<div class="box-element-five">
+			<b>I'm a box five. </b>Overflow of content due to less height. (Even if you increase width overflow will happen in bottom ie height only because content takes full width of specified element and then comes to next line (incase of text)).
+			<br>
+	</div>
+	
+	<style>
+		.box-element-five{
+			background-color: cornflowerblue;
+			margin: 0px ;
+			border: 10px solid black;
+			padding: 20px;
+			width: 400px;
+			height: 30px;
+		}
+	</style>
+	<p>
+		If the parent element has a fixed height, the child element with an auto height will not exceed the parent's height. It will expand to fit its content but will not exceed the constraints set by the parent's height.
+	</p>
+
+	<div class="box-element-six">
+			<b>I am box-6. min-height: 50px; max-height: 70px; width: auto; </b> min-height: takes given min-height irrespective of content(small or big). max-height: if max-height is less then content size then overflow. Adjust the screensize and check the over flow of box-6. Overflow starts when width goes less than 800px. <b>Keep this in mind when you do response UI screen</b>
+	</div>
+	<style>
+		.box-element-six{
+			background-color: burlywood;
+			margin: 0px ;
+			border: 10px solid rosybrown;
+			padding: 20px;
+			width: auto;
+			min-height: 30px;
+			max-height: 50px;
+		}
+	</style>
+	<h3>Height width: Percentage</h3>
+	<p>Uncomment below code and understand that 100 % is from parent.<br>
+	Try min-height is used, when the content is less, takes 100% in case of more content it takes content height<br>
+	max-height is used in picture img tag where it should be between some height
+	</p>
+	<!--
+		<style >
+			html,body{
+				width: 100%;
+				height: 100%;
+			}
+			#container{
+				height: 100%;
+				background-color: skyblue;
+				border: 3px solid black;
+			}
+		</style>
+	-->
+
+	<p>Image overflows and scroll bar appears in page.</p>
+	<img src="images/1708349.jpg " >
+	<h3>overflow: hidden; will hide or crop the overflowed part in children</h3>
+	<div class="parent-of-overflowen-element" >
+		<img src="images/1708349.jpg " >
+	</div>
+	<style>
+		.parent-of-overflowen-element{
+			width: 60%;
+			min-height: 500px;
+			max-height: 500px;
+			overflow: hidden;
+		}
+	</style>
+	<h3>overflow: scroll; bring a scroll bar to view the img</h3>
+	<div class="parent-of-overflowen-element-2" >
+		<img src="images/1708349.jpg " >
+	</div>
+	<style>
+		.parent-of-overflowen-element-2{
+			width: 60%;
+			min-height: 30%;
+			max-height: 50%;
+			overflow: scroll;
+		}
+	</style>
+	<h3>overflow-x and overflow-y </h3>
+	<div class="parent-of-overflowen-element-2" >
+		<img src="images/1708349.jpg " >
+	</div>
+	<style>
+		.parent-of-overflowen-element-2{
+			width: 60%;
+			min-height: 500px;
+			max-height: 500px;
+			overflow-y:hidden;
+			overflow-x:scroll;
+		}
+	</style>
+	<p>overflow controls both horizontal and vertical contents . <span class="keywords">  - </span> used to control the horizontal (in width) overflow element (affects the image) .<span class="keywords">overflow-y: -</span>used to control the vertical(in height) overflow element(affects the content of wrapper) .</p>
+
+
+	<h3>Border: width style color</h3>
+	<div class="Border-property-box-1">
+		Separate properties border-style,border-color can also utilized. Best practise to use pixels in border width.<br>
+		width can be thick, thin. 
+	</div>
+	<style type="text/css">
+		.Border-property-box-1{
+			border-width: 20px;
+			border-style: dashed;
+			border-color: chocolate;
+			margin-bottom: 5px;
+		}
+	</style>
+	<div class="Border-property-box-2">
+		border: 2px solid chocolate; 
+	</div>
+	<style type="text/css">
+		.Border-property-box-2{
+			border: 2px solid slategrey; 
+		}
+	</style>
+	<div class="Border-property-box-3">
+			border-top-width: thin ;<br>
+			border-top-color: cyan;<br>
+			border-top-style: dashed;<br>
+			border-bottom-width: thin;<br>
+			border-bottom-color: cyan;<br>
+			border-bottom-style: dashed;<br>
+			border-right: thick solid chocolate ;<br>
+			border-left: thick solid chocolate; <br>
+	</div>
+	<style type="text/css">
+		.Border-property-box-3{
+			margin-top: 10px;
+			border-top-width: thin ;
+			border-top-color: black;
+			border-top-style: dashed;
+			border-bottom-width: thick;
+			border-bottom-color: red;
+			border-bottom-style: dashed;
+			border-right: 7px solid chocolate ;
+			border-left: 8px solid chocolate;
+		}
+	</style>
+	<div class="Border-property-box-4">
+			border-width: 5px 10px 15px 20px;<br>
+			border-color: blue green red chocolate;<br>
+			border-style: dashed solid dashed solid;
+	</div>
+	<style>
+		.Border-property-box-4{
+			margin: 3px;
+			border-width: 5px 10px 15px 20px;
+			border-color: blue green red chocolate;
+			border-style: dashed solid dashed solid;
+		}
+	</style>
+
+	<h3>Padding: width </h3>
+	<div class="padding-div-1">
+		Padding can't have color on its own. background-color will appear in padding area.
+	</div>
+	<style>
+		.padding-div-1{
+			padding:10px;
+			border: 2px solid black;
+			margin-bottom: 5px;
+		}
+	</style>
+	<div class="padding-div-2">
+		padding-top: 10px;	padding-bottom: 20px;	padding-right: 9px;	padding-left: 3px; <br>
+		padding: 10px 10px 10px; is top right bottom and no left.
+	</div>
+	<style>
+		.padding-div-2{
+			padding-top: 10px;
+			padding-bottom: 20px;
+			padding-right: 9px;
+			padding-left: 20px;
+			border: 2px solid black;
+		}
+	</style>
+	<p class="padding-div-3">
+		padding-block-end:8px; bottom	</p>
+	<style>
+		.padding-div-3{
+			padding-block-end: 8px;
+			margin: 5px;
+			border: 2px solid black;
+		}
+	</style>
+
+	<h3>Margin: auto</h3>
+
+	<div >
+		 margin: 0 auto; makes top and bottom = 0, right and left = auto width is spilt evenly and assigned to the right and left values. <br>
+		 background-color is applied to margin.
+	</div>
+
+	<div class="margin-auto">
+		<b>this is margin auto div. Nothing happens.</b>
+	</div>
+	<style>
+		.margin-auto{
+			margin: 0 auto;
+			border: 10px solid blue;
+		}
+	</style>
+
+	<p class="with-width-margin">
+	    Block-Level Element: The element must be a block-level element (e.g., a div, p, etc.) because block-level elements take up the full available width of their parent container.<br>
+
+	    Specified Width: The element must have a specified width. The browser calculates equal left and right margins to center the element within its parent.<br><b>Here we used width: 60% so margin is (100-60)/2 = 20 left and right</b>
+
+	</p>
+	
+	<style type="">
+		.with-width-margin{
+			margin: 0 auto;
+			width: 90%;
+		}
+	</style>
+
+	<p>
+		<br> Specified Width: Specify the width of inner-container < 100%. We can't calculate margin when width occupies full width. inner-container width > 100% will cause overflow so margin can't be calculated.
+	</p>
+
+	<h3>display: inline-block</h3>
+	<p>
+		Makes an element behave like an inline element while still retaining some of the characteristics of a block-level element. <br>
+		Inline Behavior: The element doesn't start on a new line; it flows within the content like inline elements such as text and images. This means you can have multiple inline-block elements appear side by side.<br>
+		Block Behavior: The element can have width, height, margin, and padding properties applied to it, just like a block-level element. This allows you to control the layout and spacing around the element.
+	</p>
+	<div class="inline-block-outer-div">
+		<div class="inline-block-inner-child child-1">
+			Child-1 div
+		</div>
+
+		<div class="inline-block-inner-child child-2">
+			Child-2 div
+		</div>
+
+	</div>
+	<style type="text/css">
+		.inline-block-outer-div{
+			border: 3px solid; black;
+			text-align: center;
+		}
+		.child-1{
+			border: 3px solid black;
+		}
+		.child-2{
+			border: 3px solid black;
+		}
+		.inline-block-inner-child{
+			display: inline-block;
+
+		}
+	</style>
+
+	<h3>Box property on inline element</h3>
+	<p>Inline elements takes the contentline's height and content's width as width.<b class="inline-b">I am an Inline Element inside. </b> If span has height: 40% it can't shrink as it is taking content's height.</p>
+
+	<p>Margin and padding affects only left and right. Top and Botton margin is there but useless. Height and width does'nt affect the content.</p>
+	<style >
+		.inline-b{
+			border:20px blueviolet solid;
+			padding: 50px;
+			margin: 30px;
+			height: 200px;
+			width: 500px;
+		}
+	</style>
+
+	<h3>Display property:</h3>
+	<p>block, inline, inline-block, none, flex, grid, table, table-cell, table-row, inline-table, inline-flex, inline-grid, initial, inherit</p>
+
+	<h3> inline: </h3>
+	<p>it transforms block level element into an inline-level element</p>
+
+	<div >
+		<ul>
+			<li><a href="#">home</a></li>
+			<li><a href="#">about</a></li>
+			<li><a href="#" >courses</a></li>
+			<li><a href="#">contact</a></li>
+			
+		</ul>
+	</div>
+	<div id="menu">
+		<ul>
+			<li><a href="#">home</a></li>
+			<li><a href="#">about</a></li>
+			<li ><a href="#" >courses</a></li>
+			<li><a href="#">contact</a></li>
+			
+		</ul>
+	</div>
+	<style>
+		#menu{
+			border:2px purple solid;
+			width: 80%;
+			margin: 0 auto;
+			text-align: center;
+		}
+		#menu a{
+			text-decoration: none;
+			color: black;
+		}
+		#menu li{
+			background-color: whitesmoke;
+			display: inline;
+			padding: 10px
+		}
+		#menu ul{
+			background-color: cyan;
+			padding: 10px;
+			margin: 16px 0px;
+		}
+	</style> 
+
+	<h3>inline - block</h3>
+	<p>
+		Applying height and width to li tags. No border, No padding, No margin. inline-block brings both props to inline or block element.
+	</p>
+	<div class ="inline-block-menu">
+		<ul>
+			<li><a href="#">home</a></li>
+			<li><a href="#">about</a></li>
+			<li ><a href="#" >courses</a></li>
+			<li><a href="#">contact</a></li>
+			
+		</ul>
+	</div>
+	<style>
+		.inline-block-menu{
+			border:2px purple solid;
+			width: 80%;
+			margin: 0 auto;
+			text-align: center;
+		}
+		.inline-block-menu ul{
+			background-color: cyan;
+			padding: 10px;
+			margin: 16px 0px;
+		}
+		.inline-block-menu a{
+			text-decoration: none;
+			color: black;
+		}
+		.inline-block-menu li{
+			background-color: whitesmoke;
+			display: inline-block;
+			height: 50px;
+			width: 80px;
+		}
+		
+	</style> 
+	
+	<h3>display: none</h3>
+		<p id="hidden-element"> hidden-element</p>
+		<p>It hides entire element (p tag) out.</p>
+	<style>
+		#hidden-element{
+			display: none;
+		}
+	</style>
+
+	<h3>visibility: hidden</h3>
+		<p id="visibility-hidden"> content </p>
+		<p>Only content is hidden, element remains.</p>
+		<style>
+			#visibility-hidden{
+				visibility: hidden;
+			}
+		</style>
+
+
+	<h3>Box shadow property</h3>
+	<p> box-shadow: left(-v)orright(+v) top(-v)orbottom(+v) blur spread color; 0 - means not no shadow it means dont push shadow in lr or tb.</p>	
+	
+	<div id="topleft" class="bs">
+		<p>topleft</p>
+	</div>
+	<div id="bottomright" class="bs">
+		<p>bottomright</p>
+	</div>
+	<div id="bottomrightspread" class="bs">
+		<p>bottom right spread</p>
+	</div>
+	<div id="Outerspread" class="bs">
+		<p>Outerspread</p>
+	</div>
+	<div id="Inset" class="bs">
+		<p>Inset</p>
+	</div>
+
+	<style >
+		.bs{
+			width: 100px;
+			height: 100px;
+			border: 3px violet solid;
+			margin: 10px auto;
+		}
+		#topleft{
+			box-shadow: -5px -5px grey;
+		}
+		#bottomright{
+			box-shadow: 5px 5px 5px grey;
+		}
+		#bottomrightspread{
+			box-shadow: 5px 5px 5px 5px grey;
+		}
+		#Outerspread{
+			box-shadow: 0 0 10px grey;
+		}
+		#Inset{
+			box-shadow: inset 0 0 10px grey;
+		}
+	</style>
+
+
+	
+
+
+
+
+</div>
+
+
+</body>
+</html>
